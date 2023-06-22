@@ -2454,3 +2454,76 @@ There are 3 unused configuration paths:
 [0m13:53:57.915927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a4b1a8bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a4b1a9180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a4b1a9f30>]}
 [0m13:53:57.916448 [debug] [MainThread]: Flushing usage events
 [0m13:54:04.023986 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2023-06-22 19:55:36.241918 | 55b363d7-efce-475c-9869-8d7d6f2d4232 ==============================
+[0m19:55:36.241918 [info ] [MainThread]: Running with dbt=1.4.6
+[0m19:55:36.245500 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'full_refresh': True, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m19:55:36.246023 [debug] [MainThread]: Tracking: tracking
+[0m19:55:36.248615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2be6ab30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2be6a3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2be6ab00>]}
+[0m19:55:36.285768 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m19:55:36.307993 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m19:55:36.308687 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:55:36.309549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '55b363d7-efce-475c-9869-8d7d6f2d4232', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2be7a920>]}
+[0m19:55:37.710790 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.desafioaethaina.marts
+- models.desafioaethaina.intermediate
+- models.desafioaethaina.staging
+[0m19:55:37.720053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '55b363d7-efce-475c-9869-8d7d6f2d4232', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2bb26d40>]}
+[0m19:55:37.741583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '55b363d7-efce-475c-9869-8d7d6f2d4232', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2bb21c60>]}
+[0m19:55:37.742445 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 64 seed files, 0 sources, 0 exposures, 0 metrics
+[0m19:55:37.743010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '55b363d7-efce-475c-9869-8d7d6f2d4232', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2c34f2b0>]}
+[0m19:55:37.747134 [info ] [MainThread]: 
+[0m19:55:37.749154 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:55:37.750349 [debug] [MainThread]: Command end result
+[0m19:55:37.771784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2be7a590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2bb21ff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdb2bb215a0>]}
+[0m19:55:37.772524 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-06-22 19:56:36.178239 | 3a5fa263-87d0-4ba4-b44a-e561a2b390d0 ==============================
+[0m19:56:36.178239 [info ] [MainThread]: Running with dbt=1.4.6
+[0m19:56:36.181541 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'full_refresh': True, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m19:56:36.182365 [debug] [MainThread]: Tracking: tracking
+[0m19:56:36.187238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6397a8ae30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6397a8a650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6397a8bb50>]}
+[0m19:56:36.224163 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m19:56:36.291284 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:56:36.291618 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:56:36.294022 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.desafioaethaina.marts
+- models.desafioaethaina.staging
+- models.desafioaethaina.intermediate
+[0m19:56:36.310822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3a5fa263-87d0-4ba4-b44a-e561a2b390d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63978d8160>]}
+[0m19:56:36.397836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3a5fa263-87d0-4ba4-b44a-e561a2b390d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6397c11960>]}
+[0m19:56:36.398760 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 64 seed files, 0 sources, 0 exposures, 0 metrics
+[0m19:56:36.399705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3a5fa263-87d0-4ba4-b44a-e561a2b390d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6397c11a20>]}
+[0m19:56:36.402952 [info ] [MainThread]: 
+[0m19:56:36.404043 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:56:36.405007 [debug] [MainThread]: Command end result
+[0m19:56:36.419775 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63981677c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6397fc7d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6397fc7100>]}
+[0m19:56:36.420964 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-06-22 19:56:49.491984 | 121c05ea-db32-4df1-8175-744bb132e458 ==============================
+[0m19:56:49.491984 [info ] [MainThread]: Running with dbt=1.4.6
+[0m19:56:49.494245 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'full_refresh': True, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m19:56:49.494695 [debug] [MainThread]: Tracking: tracking
+[0m19:56:49.496563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9791683df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9791683670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9791683dc0>]}
+[0m19:56:49.519517 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m19:56:49.541070 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:56:49.542266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '121c05ea-db32-4df1-8175-744bb132e458', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9791683550>]}
+[0m19:56:50.853610 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.desafioaethaina.staging
+- models.desafioaethaina.marts
+- models.desafioaethaina.intermediate
+[0m19:56:50.867370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '121c05ea-db32-4df1-8175-744bb132e458', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f979153f1c0>]}
+[0m19:56:50.891009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '121c05ea-db32-4df1-8175-744bb132e458', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f97916834c0>]}
+[0m19:56:50.891767 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 64 seed files, 0 sources, 0 exposures, 0 metrics
+[0m19:56:50.892462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '121c05ea-db32-4df1-8175-744bb132e458', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9791696920>]}
+[0m19:56:50.895912 [info ] [MainThread]: 
+[0m19:56:50.897159 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:56:50.898523 [debug] [MainThread]: Command end result
+[0m19:56:50.909980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9791696740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9791536fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9791536e30>]}
+[0m19:56:50.910523 [debug] [MainThread]: Flushing usage events
