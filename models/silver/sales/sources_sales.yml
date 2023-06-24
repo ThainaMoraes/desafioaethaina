@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: source_dw
+    description: Sources from DW with dataset od AdventureWorks
+    schema: dev_thaina
+    tables:
+      - name: currency
+        description: Lookup table containing standard ISO currencies.
+
+      - name: currencyrate
+        description: Currency exchange rates.
+
+      - name: customer
+        description: Current customer information. Also see the Person and Store tables.
+
+    

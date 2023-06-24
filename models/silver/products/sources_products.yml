@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: source_dw
+    description: Sources from DW with dataset od AdventureWorks
+    schema: dev_thaina
+    tables:
+      - name: product
+        description: Products sold or used in the manfacturing of sold products.
+
+      - name: location
+        description: Product inventory and manufacturing locations.
+
+      - name: productcategory
+        description: High-level product categorization.
+
+      - name: productsubcategory
+        description: Product subcategories.
+
+      - name: productdescription
+        description: Product descriptions in several languages.
+
+      - name: productinventory
+        description: Product inventory information.
+
+      - name: productmodel
+        description: Product model classification.
+     

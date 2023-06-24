@@ -24,7 +24,6 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
-
 # Configuring models
 # Full documentation: https://docs.martsgetdbt.com/docs/configuring-models
 
@@ -34,7 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   desafioaethaina:
     # Config indicated by + and applies to all files under models/example/
-    marts:
+    gold:
       +materialized: table
       +schema: gold
 
@@ -42,8 +41,8 @@ models:
       +materializes: table
       +schema: intermediate
       
-    staging:
-      +materialized: view
+    silver:
+      +materialized: table
       +schema: silver
 
 
