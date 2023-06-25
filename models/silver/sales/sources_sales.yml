@@ -14,4 +14,11 @@ sources:
       - name: customer
         description: Current customer information. Also see the Person and Store tables.
 
-    
+      - name: salesorderdetail
+        description: Individual products associated with a specific sales order. See SalesOrderHeader.
+
+      # - name: 
+      #   description: 
+      
+      # - name:   
+      #   description:

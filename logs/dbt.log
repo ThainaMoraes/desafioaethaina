@@ -14846,3 +14846,1263 @@ from union_all;
 [0m22:02:53.687486 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
 [0m22:02:53.688461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1feffd45b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1feffcc100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1feffcc190>]}
 [0m22:02:53.689221 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-06-25 13:05:56.820110 | 456a2f69-d7df-402f-b429-39378741328e ==============================
+[0m13:05:56.820110 [info ] [MainThread]: Running with dbt=1.4.6
+[0m13:05:56.823277 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int_product'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m13:05:56.823843 [debug] [MainThread]: Tracking: tracking
+[0m13:05:56.826080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c9458a740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c9458a2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c9458a710>]}
+[0m13:05:56.855601 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m13:05:57.043570 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m13:05:57.045019 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/intermediate/int_product.sql
+[0m13:05:57.045472 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/silver/sales/stg_sales_order_header_reason.sql
+[0m13:05:57.045889 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/silver/sales/stg_currency_rate.sql
+[0m13:05:57.110724 [debug] [MainThread]: 1603: static parser failed on intermediate/int_product.sql
+[0m13:05:57.117238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c94633940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c9443ffa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c9443cb20>]}
+[0m13:05:57.117663 [debug] [MainThread]: Flushing usage events
+[0m13:05:59.479791 [error] [MainThread]: Encountered an error:
+Compilation Error in model int_product (models/intermediate/int_product.sql)
+  source() takes exactly two arguments (1 given)
+
+
+============================== 2023-06-25 13:06:32.873047 | 7ab6a327-d562-4240-b97d-a9a511ba09bd ==============================
+[0m13:06:32.873047 [info ] [MainThread]: Running with dbt=1.4.6
+[0m13:06:32.875041 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int_product'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m13:06:32.875472 [debug] [MainThread]: Tracking: tracking
+[0m13:06:32.877720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3db96710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3db95e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3db966e0>]}
+[0m13:06:32.906978 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m13:06:32.978208 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m13:06:32.979420 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/intermediate/int_product.sql
+[0m13:06:32.979864 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/silver/sales/stg_sales_order_header_reason.sql
+[0m13:06:32.980248 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/silver/sales/stg_currency_rate.sql
+[0m13:06:33.046309 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_product.sql
+[0m13:06:33.061536 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header_reason.sql
+[0m13:06:33.066285 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_currency_rate.sql
+[0m13:06:33.080906 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.desafioaethaina.gold
+[0m13:06:33.091731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7ab6a327-d562-4240-b97d-a9a511ba09bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3da40e80>]}
+[0m13:06:33.112471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7ab6a327-d562-4240-b97d-a9a511ba09bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3d9efa60>]}
+[0m13:06:33.113078 [info ] [MainThread]: Found 18 models, 0 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 64 seed files, 14 sources, 0 exposures, 0 metrics
+[0m13:06:33.113675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ab6a327-d562-4240-b97d-a9a511ba09bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3d9efa90>]}
+[0m13:06:33.118039 [info ] [MainThread]: 
+[0m13:06:33.121544 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:06:33.123950 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina'
+[0m13:06:33.124705 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:10:41.680727 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina_silver'
+[0m13:10:41.682152 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina'
+[0m13:10:41.682567 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:10:41.683635 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina_intermediate'
+[0m13:10:41.683950 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:10:41.684651 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:10:42.805768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ab6a327-d562-4240-b97d-a9a511ba09bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3db6abc0>]}
+[0m13:10:42.806594 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:10:42.807036 [info ] [MainThread]: 
+[0m13:10:42.816890 [debug] [Thread-1 (]: Began running node model.desafioaethaina.int_product
+[0m13:10:42.817763 [info ] [Thread-1 (]: 1 of 1 START sql view model dev_thaina_intermediate.int_product ................ [RUN]
+[0m13:10:42.819204 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.desafioaethaina.int_product'
+[0m13:10:42.819802 [debug] [Thread-1 (]: Began compiling node model.desafioaethaina.int_product
+[0m13:10:42.828220 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.int_product"
+[0m13:10:42.829867 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.int_product (compile): 2023-06-25 13:10:42.820228 => 2023-06-25 13:10:42.829588
+[0m13:10:42.831002 [debug] [Thread-1 (]: Began executing node model.desafioaethaina.int_product
+[0m13:10:42.895385 [debug] [Thread-1 (]: Writing runtime sql for node "model.desafioaethaina.int_product"
+[0m13:10:42.895994 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:10:42.898043 [debug] [Thread-1 (]: On model.desafioaethaina.int_product: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.int_product"} */
+
+
+  create or replace view `desafioaethaina`.`dev_thaina_intermediate`.`int_product`
+  OPTIONS()
+  as with product as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_product` 
+)
+
+, subcategory as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_subcategory`
+)
+
+, category as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_category`
+)
+
+, inventory as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_inventory`
+)
+
+, location as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_location`
+)
+
+, model as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_model`
+)
+
+, union_all as (
+    select 
+        product.product_id
+        , product_model_id
+        , subcategory_id
+        , category.category_id
+        , location.location_id
+        , category_name
+        , subcategory_name
+        , product_name
+        , product_number
+        , makeflag
+        , finished_goods_flag
+        , color
+        , safety_stock_level
+        , stand_cost
+        , list_price
+        , size_product
+        , style_product
+        , weight_product
+        , location_name
+        , cost_rate
+        , availability
+        , shelf
+        , bin
+        , quantity_inventory
+        , model_name
+    from product
+    left join subcategory
+    on product.product_subcategory_id = subcategory.subcategory_id
+    left join category
+    on subcategory.category_id = category.category_id
+    left join inventory 
+    on inventory.product_id = product.product_id
+  	left join location
+  	on location.location_id = inventory.location_id
+    left join model
+    on product.product_model_id = model.model_id
+)
+
+select * 
+from union_all;
+
+
+[0m13:10:44.952643 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:81945667-0ffb-42d0-8974-533d942f71dc&page=queryresults
+[0m13:10:44.976040 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.int_product (execute): 2023-06-25 13:10:42.831629 => 2023-06-25 13:10:44.975919
+[0m13:10:44.977497 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ab6a327-d562-4240-b97d-a9a511ba09bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3d300c10>]}
+[0m13:10:44.978742 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dev_thaina_intermediate.int_product ........... [[32mCREATE VIEW (0 processed)[0m in 2.16s]
+[0m13:10:44.982109 [debug] [Thread-1 (]: Finished running node model.desafioaethaina.int_product
+[0m13:10:44.984992 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:10:44.986175 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:10:44.986735 [debug] [MainThread]: Connection 'list_desafioaethaina_dev_thaina_silver' was properly closed.
+[0m13:10:44.987237 [debug] [MainThread]: Connection 'model.desafioaethaina.int_product' was properly closed.
+[0m13:10:44.987691 [debug] [MainThread]: Connection 'list_desafioaethaina_dev_thaina_intermediate' was properly closed.
+[0m13:10:44.988244 [info ] [MainThread]: 
+[0m13:10:44.989511 [info ] [MainThread]: Finished running 1 view model in 0 hours 4 minutes and 11.87 seconds (251.87s).
+[0m13:10:44.990527 [debug] [MainThread]: Command end result
+[0m13:10:45.016480 [info ] [MainThread]: 
+[0m13:10:45.017543 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:10:45.018455 [info ] [MainThread]: 
+[0m13:10:45.019312 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:10:45.020336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3d9efdc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3db9a6b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc3db6a980>]}
+[0m13:10:45.021881 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-06-25 13:12:12.342637 | 251fb777-e222-4360-93e7-6d476eeb949b ==============================
+[0m13:12:12.342637 [info ] [MainThread]: Running with dbt=1.4.6
+[0m13:12:12.344809 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m13:12:12.345341 [debug] [MainThread]: Tracking: tracking
+[0m13:12:12.347056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97bdf1d20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd978986530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9789867d0>]}
+[0m13:12:12.378900 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m13:12:12.466122 [debug] [MainThread]: Partial parsing enabled: 7 files deleted, 7 files added, 0 files changed.
+[0m13:12:12.467961 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/purchasing/stg_sales_order_header.sql
+[0m13:12:12.468370 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/purchasing/stg_customer.sql
+[0m13:12:12.468670 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/purchasing/stg_sales_order_header_reason.sql
+[0m13:12:12.469030 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/purchasing/sources_purchasing.yml
+[0m13:12:12.469326 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/purchasing/stg_sales_order_detail.sql
+[0m13:12:12.469619 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/purchasing/stg_currency.sql
+[0m13:12:12.469904 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/purchasing/stg_currency_rate.sql
+[0m13:12:12.470196 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/sales/stg_currency.sql
+[0m13:12:12.470410 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/sales/stg_currency_rate.sql
+[0m13:12:12.470621 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/sales/stg_sales_order_header.sql
+[0m13:12:12.470828 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/sales/stg_customer.sql
+[0m13:12:12.471035 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/sales/stg_sales_order_header_reason.sql
+[0m13:12:12.471241 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/sales/stg_sales_order_detail.sql
+[0m13:12:12.545139 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_sales_order_header.sql
+[0m13:12:12.560734 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_customer.sql
+[0m13:12:12.565429 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_sales_order_header_reason.sql
+[0m13:12:12.570005 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_sales_order_detail.sql
+[0m13:12:12.574705 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_currency.sql
+[0m13:12:12.579200 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_currency_rate.sql
+[0m13:12:12.615912 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.desafioaethaina.gold
+[0m13:12:12.630229 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9780d80d0>]}
+[0m13:12:12.648833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9787e3b50>]}
+[0m13:12:12.649431 [info ] [MainThread]: Found 18 models, 0 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 64 seed files, 14 sources, 0 exposures, 0 metrics
+[0m13:12:12.650156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9787e3f40>]}
+[0m13:12:12.656845 [info ] [MainThread]: 
+[0m13:12:12.660366 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:12:12.662744 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina'
+[0m13:12:12.663349 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:12:12.664168 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina'
+[0m13:12:12.664726 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:12:14.054896 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina_intermediate'
+[0m13:12:14.055760 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina'
+[0m13:12:14.056745 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina_silver'
+[0m13:12:14.057126 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:12:14.057647 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:12:14.058022 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:12:15.310082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9787e37f0>]}
+[0m13:12:15.311617 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:12:15.312462 [info ] [MainThread]: 
+[0m13:12:15.318462 [debug] [Thread-1 (]: Began running node model.desafioaethaina.stg_address
+[0m13:12:15.319054 [debug] [Thread-2 (]: Began running node model.desafioaethaina.stg_address_type
+[0m13:12:15.319562 [debug] [Thread-3 (]: Began running node model.desafioaethaina.stg_category
+[0m13:12:15.320069 [debug] [Thread-4 (]: Began running node model.desafioaethaina.stg_contact_type
+[0m13:12:15.320643 [info ] [Thread-1 (]: 1 of 18 START sql table model dev_thaina_silver.stg_address .................... [RUN]
+[0m13:12:15.321893 [info ] [Thread-2 (]: 2 of 18 START sql table model dev_thaina_silver.stg_address_type ............... [RUN]
+[0m13:12:15.322909 [info ] [Thread-3 (]: 3 of 18 START sql table model dev_thaina_silver.stg_category ................... [RUN]
+[0m13:12:15.324198 [info ] [Thread-4 (]: 4 of 18 START sql table model dev_thaina_silver.stg_contact_type ............... [RUN]
+[0m13:12:15.326689 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_address'
+[0m13:12:15.327852 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_address_type'
+[0m13:12:15.328556 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_category'
+[0m13:12:15.329258 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_contact_type'
+[0m13:12:15.329677 [debug] [Thread-1 (]: Began compiling node model.desafioaethaina.stg_address
+[0m13:12:15.330049 [debug] [Thread-2 (]: Began compiling node model.desafioaethaina.stg_address_type
+[0m13:12:15.330430 [debug] [Thread-3 (]: Began compiling node model.desafioaethaina.stg_category
+[0m13:12:15.330766 [debug] [Thread-4 (]: Began compiling node model.desafioaethaina.stg_contact_type
+[0m13:12:15.334236 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.stg_address"
+[0m13:12:15.339430 [debug] [Thread-2 (]: Writing injected SQL for node "model.desafioaethaina.stg_address_type"
+[0m13:12:15.343634 [debug] [Thread-3 (]: Writing injected SQL for node "model.desafioaethaina.stg_category"
+[0m13:12:15.348631 [debug] [Thread-4 (]: Writing injected SQL for node "model.desafioaethaina.stg_contact_type"
+[0m13:12:15.350112 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_address (compile): 2023-06-25 13:12:15.330984 => 2023-06-25 13:12:15.349906
+[0m13:12:15.350916 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_address_type (compile): 2023-06-25 13:12:15.334631 => 2023-06-25 13:12:15.350747
+[0m13:12:15.351768 [debug] [Thread-1 (]: Began executing node model.desafioaethaina.stg_address
+[0m13:12:15.352532 [debug] [Thread-4 (]: Timing info for model.desafioaethaina.stg_contact_type (compile): 2023-06-25 13:12:15.344247 => 2023-06-25 13:12:15.352387
+[0m13:12:15.352991 [debug] [Thread-3 (]: Timing info for model.desafioaethaina.stg_category (compile): 2023-06-25 13:12:15.339972 => 2023-06-25 13:12:15.352899
+[0m13:12:15.353435 [debug] [Thread-2 (]: Began executing node model.desafioaethaina.stg_address_type
+[0m13:12:15.369513 [debug] [Thread-4 (]: Began executing node model.desafioaethaina.stg_contact_type
+[0m13:12:15.377325 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:12:15.377862 [debug] [Thread-3 (]: Began executing node model.desafioaethaina.stg_category
+[0m13:12:15.384341 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:12:15.388420 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:12:15.393062 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:12:16.948645 [debug] [Thread-1 (]: Writing runtime sql for node "model.desafioaethaina.stg_address"
+[0m13:12:16.950801 [debug] [Thread-2 (]: Writing runtime sql for node "model.desafioaethaina.stg_address_type"
+[0m13:12:16.951575 [debug] [Thread-1 (]: On model.desafioaethaina.stg_address: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_address"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_address`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    addressid as address_id
+    , addressline1 as address_line1
+    , addressline2 as address_line2
+    , city
+    , stateprovinceid as state_province_id
+    , postalcode Street address information for customers, employees, and vendors.
+  from  `desafioaethaina`.`dev_thaina`.`address`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:16.953878 [debug] [Thread-2 (]: On model.desafioaethaina.stg_address_type: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_address_type"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_address_type`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    addresstypeid as address_type_id
+    , name as address_type_name 
+  from  `desafioaethaina`.`dev_thaina`.`addresstype`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:16.961027 [debug] [Thread-4 (]: Writing runtime sql for node "model.desafioaethaina.stg_contact_type"
+[0m13:12:16.963805 [debug] [Thread-3 (]: Writing runtime sql for node "model.desafioaethaina.stg_category"
+[0m13:12:16.964443 [debug] [Thread-4 (]: On model.desafioaethaina.stg_contact_type: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_contact_type"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_contact_type`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    contacttypeid as contact_type_id
+    , name as contact_type_name 
+  from  `desafioaethaina`.`dev_thaina`.`contacttype`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:16.966655 [debug] [Thread-3 (]: On model.desafioaethaina.stg_category: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_category"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_category`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    productcategoryid as category_id
+    , name as category_name
+  from  `desafioaethaina`.`dev_thaina`.`productcategory`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:17.257141 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected ")" but got identifier "address" at [18:25]')
+[0m13:12:17.808957 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:cbaa4bef-7540-4f0a-9610-da9e79bfabb5&page=queryresults
+[0m13:12:17.809931 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_address (execute): 2023-06-25 13:12:15.353714 => 2023-06-25 13:12:17.809825
+[0m13:12:17.829301 [debug] [Thread-1 (]: Database Error in model stg_address (models/silver/person/stg_address.sql)
+  Syntax error: Expected ")" but got identifier "address" at [18:25]
+  compiled Code at target/run/desafioaethaina/models/silver/person/stg_address.sql
+[0m13:12:17.830127 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd973d53a60>]}
+[0m13:12:17.830895 [error] [Thread-1 (]: 1 of 18 ERROR creating sql table model dev_thaina_silver.stg_address ........... [[31mERROR[0m in 2.50s]
+[0m13:12:17.833896 [debug] [Thread-1 (]: Finished running node model.desafioaethaina.stg_address
+[0m13:12:17.834411 [debug] [Thread-1 (]: Began running node model.desafioaethaina.stg_country_region
+[0m13:12:17.834952 [info ] [Thread-1 (]: 5 of 18 START sql table model dev_thaina_silver.stg_country_region ............. [RUN]
+[0m13:12:17.835884 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_country_region'
+[0m13:12:17.836302 [debug] [Thread-1 (]: Began compiling node model.desafioaethaina.stg_country_region
+[0m13:12:17.841492 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.stg_country_region"
+[0m13:12:17.842430 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_country_region (compile): 2023-06-25 13:12:17.836559 => 2023-06-25 13:12:17.842273
+[0m13:12:17.843161 [debug] [Thread-1 (]: Began executing node model.desafioaethaina.stg_country_region
+[0m13:12:17.848241 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:12:18.743474 [debug] [Thread-1 (]: Writing runtime sql for node "model.desafioaethaina.stg_country_region"
+[0m13:12:18.744194 [debug] [Thread-1 (]: On model.desafioaethaina.stg_country_region: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_country_region"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_country_region`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    countryregioncode as country_region_code
+    , name as country_region_name 
+  from  `desafioaethaina`.`dev_thaina`.`countryregion`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:20.248012 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:d20f6064-a423-4e17-afad-a5b0f56bd357&page=queryresults
+[0m13:12:20.276662 [debug] [Thread-3 (]: Timing info for model.desafioaethaina.stg_category (execute): 2023-06-25 13:12:15.389187 => 2023-06-25 13:12:20.276597
+[0m13:12:20.277488 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97049e7d0>]}
+[0m13:12:20.278001 [info ] [Thread-3 (]: 3 of 18 OK created sql table model dev_thaina_silver.stg_category .............. [[32mCREATE TABLE (4.0 rows, 74.0 Bytes processed)[0m in 4.95s]
+[0m13:12:20.278548 [debug] [Thread-3 (]: Finished running node model.desafioaethaina.stg_category
+[0m13:12:20.279269 [debug] [Thread-3 (]: Began running node model.desafioaethaina.stg_currency
+[0m13:12:20.280068 [info ] [Thread-3 (]: 6 of 18 START sql table model dev_thaina_silver.stg_currency ................... [RUN]
+[0m13:12:20.281183 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_currency'
+[0m13:12:20.281767 [debug] [Thread-3 (]: Began compiling node model.desafioaethaina.stg_currency
+[0m13:12:20.287580 [debug] [Thread-3 (]: Writing injected SQL for node "model.desafioaethaina.stg_currency"
+[0m13:12:20.288405 [debug] [Thread-3 (]: Timing info for model.desafioaethaina.stg_currency (compile): 2023-06-25 13:12:20.282160 => 2023-06-25 13:12:20.288306
+[0m13:12:20.288939 [debug] [Thread-3 (]: Began executing node model.desafioaethaina.stg_currency
+[0m13:12:20.291186 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:a9c5562c-f3b3-4c5f-afc1-d5117546eb3c&page=queryresults
+[0m13:12:20.297068 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:12:20.302290 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_address_type (execute): 2023-06-25 13:12:15.378124 => 2023-06-25 13:12:20.302099
+[0m13:12:20.304646 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97886d210>]}
+[0m13:12:20.307814 [info ] [Thread-2 (]: 2 of 18 OK created sql table model dev_thaina_silver.stg_address_type .......... [[32mCREATE TABLE (6.0 rows, 104.0 Bytes processed)[0m in 4.98s]
+[0m13:12:20.344977 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:b146e75f-c4c6-45dc-a852-b00a7f9841b3&page=queryresults
+[0m13:12:20.345489 [debug] [Thread-2 (]: Finished running node model.desafioaethaina.stg_address_type
+[0m13:12:20.351597 [debug] [Thread-4 (]: Timing info for model.desafioaethaina.stg_contact_type (execute): 2023-06-25 13:12:15.384701 => 2023-06-25 13:12:20.351412
+[0m13:12:20.352421 [debug] [Thread-2 (]: Began running node model.desafioaethaina.stg_currency_rate
+[0m13:12:20.353632 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd978b60ee0>]}
+[0m13:12:20.354153 [info ] [Thread-2 (]: 7 of 18 START sql table model dev_thaina_silver.stg_currency_rate .............. [RUN]
+[0m13:12:20.355112 [info ] [Thread-4 (]: 4 of 18 OK created sql table model dev_thaina_silver.stg_contact_type .......... [[32mCREATE TABLE (20.0 rows, 595.0 Bytes processed)[0m in 5.02s]
+[0m13:12:20.356442 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_currency_rate'
+[0m13:12:20.356935 [debug] [Thread-4 (]: Finished running node model.desafioaethaina.stg_contact_type
+[0m13:12:20.357350 [debug] [Thread-2 (]: Began compiling node model.desafioaethaina.stg_currency_rate
+[0m13:12:20.357825 [debug] [Thread-4 (]: Began running node model.desafioaethaina.stg_customer
+[0m13:12:20.360643 [debug] [Thread-2 (]: Writing injected SQL for node "model.desafioaethaina.stg_currency_rate"
+[0m13:12:20.361459 [info ] [Thread-4 (]: 8 of 18 START sql table model dev_thaina_silver.stg_customer ................... [RUN]
+[0m13:12:20.362388 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_currency_rate (compile): 2023-06-25 13:12:20.358264 => 2023-06-25 13:12:20.362244
+[0m13:12:20.364241 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_customer'
+[0m13:12:20.365165 [debug] [Thread-2 (]: Began executing node model.desafioaethaina.stg_currency_rate
+[0m13:12:20.366100 [debug] [Thread-4 (]: Began compiling node model.desafioaethaina.stg_customer
+[0m13:12:20.373162 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:12:20.383934 [debug] [Thread-4 (]: Writing injected SQL for node "model.desafioaethaina.stg_customer"
+[0m13:12:20.385632 [debug] [Thread-4 (]: Timing info for model.desafioaethaina.stg_customer (compile): 2023-06-25 13:12:20.373705 => 2023-06-25 13:12:20.385318
+[0m13:12:20.386952 [debug] [Thread-4 (]: Began executing node model.desafioaethaina.stg_customer
+[0m13:12:20.392788 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:12:21.409364 [debug] [Thread-4 (]: Writing runtime sql for node "model.desafioaethaina.stg_customer"
+[0m13:12:21.411204 [debug] [Thread-3 (]: Writing runtime sql for node "model.desafioaethaina.stg_currency"
+[0m13:12:21.411835 [debug] [Thread-3 (]: On model.desafioaethaina.stg_currency: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_currency"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_currency`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    currencycode as currency_code
+    , name as currency_name
+  from  `desafioaethaina`.`dev_thaina`.`currency`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:21.412141 [debug] [Thread-4 (]: On model.desafioaethaina.stg_customer: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_customer"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_customer`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    customerid as customer_id
+    , personid as person_id
+    , storeid as store_id
+    , territoryid as territoryid
+  from  `desafioaethaina`.`dev_thaina`.`customer`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:21.448249 [debug] [Thread-2 (]: Writing runtime sql for node "model.desafioaethaina.stg_currency_rate"
+[0m13:12:21.448844 [debug] [Thread-2 (]: On model.desafioaethaina.stg_currency_rate: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_currency_rate"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_currency_rate`
+    
+    
+    OPTIONS()
+    as (
+      with
+  source_data as (
+    select
+      currencyrateid as currency_rate_id
+    , fromcurrencycode as from_currency_code
+    , tocurrencycode as to_currency_code
+    , averagerate as avg_rate
+    , endofdayrate as end_of_day_rate
+      from { { source('source_dw', 'currencyrate') } }
+  )
+select
+  *
+from
+  source_data
+    );
+  
+[0m13:12:21.816934 [debug] [Thread-2 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Unexpected "{" at [19:12]')
+[0m13:12:22.126309 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:6deeb15f-86bd-4408-bdc2-9ed7ca020723&page=queryresults
+[0m13:12:22.129822 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_country_region (execute): 2023-06-25 13:12:17.843755 => 2023-06-25 13:12:22.129750
+[0m13:12:22.130911 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd973d51b70>]}
+[0m13:12:22.131584 [info ] [Thread-1 (]: 5 of 18 OK created sql table model dev_thaina_silver.stg_country_region ........ [[32mCREATE TABLE (238.0 rows, 3.7 KB processed)[0m in 4.30s]
+[0m13:12:22.132371 [debug] [Thread-1 (]: Finished running node model.desafioaethaina.stg_country_region
+[0m13:12:22.133409 [debug] [Thread-1 (]: Began running node model.desafioaethaina.stg_description
+[0m13:12:22.134125 [info ] [Thread-1 (]: 9 of 18 START sql table model dev_thaina_silver.stg_description ................ [RUN]
+[0m13:12:22.135779 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_description'
+[0m13:12:22.137057 [debug] [Thread-1 (]: Began compiling node model.desafioaethaina.stg_description
+[0m13:12:22.144646 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.stg_description"
+[0m13:12:22.145552 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_description (compile): 2023-06-25 13:12:22.137657 => 2023-06-25 13:12:22.145420
+[0m13:12:22.146172 [debug] [Thread-1 (]: Began executing node model.desafioaethaina.stg_description
+[0m13:12:22.153602 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:12:23.249160 [debug] [Thread-1 (]: Writing runtime sql for node "model.desafioaethaina.stg_description"
+[0m13:12:23.249739 [error] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:3131f32d-7b33-40c8-941a-b4bbecbf2212&page=queryresults
+[0m13:12:23.250732 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_currency_rate (execute): 2023-06-25 13:12:20.366940 => 2023-06-25 13:12:23.250610
+[0m13:12:23.252053 [debug] [Thread-1 (]: On model.desafioaethaina.stg_description: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_description"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_description`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    productdescriptionid as product_description_id
+    , description as product_description
+  from  `desafioaethaina`.`dev_thaina`.`productdescription`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:23.252608 [debug] [Thread-2 (]: Database Error in model stg_currency_rate (models/silver/purchasing/stg_currency_rate.sql)
+  Syntax error: Unexpected "{" at [19:12]
+  compiled Code at target/run/desafioaethaina/models/silver/purchasing/stg_currency_rate.sql
+[0m13:12:23.254868 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9703300d0>]}
+[0m13:12:23.255459 [error] [Thread-2 (]: 7 of 18 ERROR creating sql table model dev_thaina_silver.stg_currency_rate ..... [[31mERROR[0m in 2.90s]
+[0m13:12:23.256234 [debug] [Thread-2 (]: Finished running node model.desafioaethaina.stg_currency_rate
+[0m13:12:23.257179 [debug] [Thread-2 (]: Began running node model.desafioaethaina.stg_inventory
+[0m13:12:23.258422 [info ] [Thread-2 (]: 10 of 18 START sql table model dev_thaina_silver.stg_inventory ................. [RUN]
+[0m13:12:23.260890 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_inventory'
+[0m13:12:23.261574 [debug] [Thread-2 (]: Began compiling node model.desafioaethaina.stg_inventory
+[0m13:12:23.268928 [debug] [Thread-2 (]: Writing injected SQL for node "model.desafioaethaina.stg_inventory"
+[0m13:12:23.269884 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_inventory (compile): 2023-06-25 13:12:23.261987 => 2023-06-25 13:12:23.269741
+[0m13:12:23.270704 [debug] [Thread-2 (]: Began executing node model.desafioaethaina.stg_inventory
+[0m13:12:23.275251 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:12:24.274933 [debug] [Thread-2 (]: Writing runtime sql for node "model.desafioaethaina.stg_inventory"
+[0m13:12:24.275602 [debug] [Thread-2 (]: On model.desafioaethaina.stg_inventory: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_inventory"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_inventory`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    productid as product_id
+    , locationid as location_id
+    , shelf
+    , bin
+    , quantity as quantity_inventory
+  from  `desafioaethaina`.`dev_thaina`.`productinventory`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:24.891881 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:79ad1e23-6bf3-4feb-8042-0506a1443010&page=queryresults
+[0m13:12:24.895529 [debug] [Thread-4 (]: Timing info for model.desafioaethaina.stg_customer (execute): 2023-06-25 13:12:20.387660 => 2023-06-25 13:12:24.895466
+[0m13:12:24.898665 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd978b60ee0>]}
+[0m13:12:24.899784 [info ] [Thread-4 (]: 8 of 18 OK created sql table model dev_thaina_silver.stg_customer .............. [[32mCREATE TABLE (19.8k rows, 469.5 KB processed)[0m in 4.54s]
+[0m13:12:24.900621 [debug] [Thread-4 (]: Finished running node model.desafioaethaina.stg_customer
+[0m13:12:24.901604 [debug] [Thread-4 (]: Began running node model.desafioaethaina.stg_location
+[0m13:12:24.902152 [info ] [Thread-4 (]: 11 of 18 START sql table model dev_thaina_silver.stg_location .................. [RUN]
+[0m13:12:24.903351 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_location'
+[0m13:12:24.903783 [debug] [Thread-4 (]: Began compiling node model.desafioaethaina.stg_location
+[0m13:12:24.907962 [debug] [Thread-4 (]: Writing injected SQL for node "model.desafioaethaina.stg_location"
+[0m13:12:24.908578 [debug] [Thread-4 (]: Timing info for model.desafioaethaina.stg_location (compile): 2023-06-25 13:12:24.904112 => 2023-06-25 13:12:24.908477
+[0m13:12:24.908999 [debug] [Thread-4 (]: Began executing node model.desafioaethaina.stg_location
+[0m13:12:24.912644 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:12:25.165101 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:d28b994e-303e-4aa3-af7b-6da1bcb40ef7&page=queryresults
+[0m13:12:25.168779 [debug] [Thread-3 (]: Timing info for model.desafioaethaina.stg_currency (execute): 2023-06-25 13:12:20.291775 => 2023-06-25 13:12:25.168600
+[0m13:12:25.170970 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97049f8e0>]}
+[0m13:12:25.173295 [info ] [Thread-3 (]: 6 of 18 OK created sql table model dev_thaina_silver.stg_currency .............. [[32mCREATE TABLE (105.0 rows, 2.0 KB processed)[0m in 4.89s]
+[0m13:12:25.176765 [debug] [Thread-3 (]: Finished running node model.desafioaethaina.stg_currency
+[0m13:12:25.177394 [debug] [Thread-3 (]: Began running node model.desafioaethaina.stg_model
+[0m13:12:25.178133 [info ] [Thread-3 (]: 12 of 18 START sql table model dev_thaina_silver.stg_model ..................... [RUN]
+[0m13:12:25.179617 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_model'
+[0m13:12:25.180230 [debug] [Thread-3 (]: Began compiling node model.desafioaethaina.stg_model
+[0m13:12:25.185255 [debug] [Thread-3 (]: Writing injected SQL for node "model.desafioaethaina.stg_model"
+[0m13:12:25.186014 [debug] [Thread-3 (]: Timing info for model.desafioaethaina.stg_model (compile): 2023-06-25 13:12:25.180512 => 2023-06-25 13:12:25.185859
+[0m13:12:25.187135 [debug] [Thread-3 (]: Began executing node model.desafioaethaina.stg_model
+[0m13:12:25.190982 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:12:25.880418 [debug] [Thread-4 (]: Writing runtime sql for node "model.desafioaethaina.stg_location"
+[0m13:12:25.881164 [debug] [Thread-4 (]: On model.desafioaethaina.stg_location: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_location"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_location`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    locationid as location_id
+    , name as location_name
+    -- Standard hourly cost of the manufacturing location.
+    , costrate as cost_rate
+    -- Work capacity (in hours) of the manufacturing location.
+    , availability 
+  from  `desafioaethaina`.`dev_thaina`.`location`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:26.101974 [debug] [Thread-3 (]: Writing runtime sql for node "model.desafioaethaina.stg_model"
+[0m13:12:26.102639 [debug] [Thread-3 (]: On model.desafioaethaina.stg_model: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_model"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_model`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    productmodelid as model_id
+    , name as model_name
+  from  `desafioaethaina`.`dev_thaina`.`productmodel`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:26.509150 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:7042e8b3-1a43-4723-a801-f8fe20114f2f&page=queryresults
+[0m13:12:26.512009 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_description (execute): 2023-06-25 13:12:22.146610 => 2023-06-25 13:12:26.511944
+[0m13:12:26.512859 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd970492ef0>]}
+[0m13:12:26.513395 [info ] [Thread-1 (]: 9 of 18 OK created sql table model dev_thaina_silver.stg_description ........... [[32mCREATE TABLE (762.0 rows, 97.2 KB processed)[0m in 4.38s]
+[0m13:12:26.513951 [debug] [Thread-1 (]: Finished running node model.desafioaethaina.stg_description
+[0m13:12:26.514530 [debug] [Thread-1 (]: Began running node model.desafioaethaina.stg_product
+[0m13:12:26.515058 [info ] [Thread-1 (]: 13 of 18 START sql table model dev_thaina_silver.stg_product ................... [RUN]
+[0m13:12:26.516052 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_product'
+[0m13:12:26.516640 [debug] [Thread-1 (]: Began compiling node model.desafioaethaina.stg_product
+[0m13:12:26.524103 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.stg_product"
+[0m13:12:26.524742 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_product (compile): 2023-06-25 13:12:26.516923 => 2023-06-25 13:12:26.524631
+[0m13:12:26.525186 [debug] [Thread-1 (]: Began executing node model.desafioaethaina.stg_product
+[0m13:12:26.528796 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:12:27.373198 [debug] [Thread-1 (]: Writing runtime sql for node "model.desafioaethaina.stg_product"
+[0m13:12:27.373915 [debug] [Thread-1 (]: On model.desafioaethaina.stg_product: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_product"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_product`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    productid as product_id
+    , productmodelid as product_model_id
+    , productsubcategoryid as product_subcategory_id
+    , name as product_name
+    , productnumber as product_number
+    , makeflag
+    , finishedgoodsflag as finished_goods_flag
+    , color
+    , safetystocklevel as safety_stock_level
+    , standardcost as stand_cost
+    , listprice as list_price
+    , size as size_product
+    , style as style_product
+    , weight as weight_product 
+  from  `desafioaethaina`.`dev_thaina`.`product`
+)
+
+select * from source_data
+    );
+  
+[0m13:12:27.650602 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:975decb9-1773-4971-bd4c-b2830fb6a8d3&page=queryresults
+[0m13:12:27.653061 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_inventory (execute): 2023-06-25 13:12:23.271190 => 2023-06-25 13:12:27.652999
+[0m13:12:27.653864 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd978784dc0>]}
+[0m13:12:27.654596 [info ] [Thread-2 (]: 10 of 18 OK created sql table model dev_thaina_silver.stg_inventory ............ [[32mCREATE TABLE (1.1k rows, 37.1 KB processed)[0m in 4.39s]
+[0m13:12:27.655411 [debug] [Thread-2 (]: Finished running node model.desafioaethaina.stg_inventory
+[0m13:12:27.656121 [debug] [Thread-2 (]: Began running node model.desafioaethaina.stg_sales_order_detail
+[0m13:12:27.656679 [info ] [Thread-2 (]: 14 of 18 START sql table model dev_thaina_silver.stg_sales_order_detail ........ [RUN]
+[0m13:12:27.657766 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_sales_order_detail'
+[0m13:12:27.658192 [debug] [Thread-2 (]: Began compiling node model.desafioaethaina.stg_sales_order_detail
+[0m13:12:27.662194 [debug] [Thread-2 (]: Writing injected SQL for node "model.desafioaethaina.stg_sales_order_detail"
+[0m13:12:27.662935 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_sales_order_detail (compile): 2023-06-25 13:12:27.658467 => 2023-06-25 13:12:27.662843
+[0m13:12:27.663310 [debug] [Thread-2 (]: Began executing node model.desafioaethaina.stg_sales_order_detail
+[0m13:12:27.667608 [debug] [Thread-2 (]: Writing runtime sql for node "model.desafioaethaina.stg_sales_order_detail"
+[0m13:12:27.668288 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:12:27.671083 [debug] [Thread-2 (]: On model.desafioaethaina.stg_sales_order_detail: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_sales_order_detail"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_sales_order_detail`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    customerid as customer_id
+    personid as person_id
+    storeid as store_id
+    territoryid as territoryid
+  from  `desafioaethaina`.`dev_thaina`.`customer`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:28.581468 [debug] [Thread-2 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected ")" but got identifier "personid" at [14:5]')
+[0m13:12:28.839719 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:235a93bc-7c03-43ab-96ff-58bd9a72d425&page=queryresults
+[0m13:12:28.843109 [debug] [Thread-4 (]: Timing info for model.desafioaethaina.stg_location (execute): 2023-06-25 13:12:24.909244 => 2023-06-25 13:12:28.843032
+[0m13:12:28.844129 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97031e230>]}
+[0m13:12:28.844788 [info ] [Thread-4 (]: 11 of 18 OK created sql table model dev_thaina_silver.stg_location ............. [[32mCREATE TABLE (14.0 rows, 670.0 Bytes processed)[0m in 3.94s]
+[0m13:12:28.845523 [debug] [Thread-4 (]: Finished running node model.desafioaethaina.stg_location
+[0m13:12:28.846238 [debug] [Thread-4 (]: Began running node model.desafioaethaina.stg_sales_order_header
+[0m13:12:28.846871 [info ] [Thread-4 (]: 15 of 18 START sql table model dev_thaina_silver.stg_sales_order_header ........ [RUN]
+[0m13:12:28.847880 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_sales_order_header'
+[0m13:12:28.848364 [debug] [Thread-4 (]: Began compiling node model.desafioaethaina.stg_sales_order_header
+[0m13:12:28.854297 [debug] [Thread-4 (]: Writing injected SQL for node "model.desafioaethaina.stg_sales_order_header"
+[0m13:12:28.854989 [debug] [Thread-4 (]: Timing info for model.desafioaethaina.stg_sales_order_header (compile): 2023-06-25 13:12:28.848644 => 2023-06-25 13:12:28.854869
+[0m13:12:28.855491 [debug] [Thread-4 (]: Began executing node model.desafioaethaina.stg_sales_order_header
+[0m13:12:28.859588 [debug] [Thread-4 (]: Writing runtime sql for node "model.desafioaethaina.stg_sales_order_header"
+[0m13:12:28.860447 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:12:28.862637 [debug] [Thread-4 (]: On model.desafioaethaina.stg_sales_order_header: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_sales_order_header"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_sales_order_header`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    customerid as customer_id
+    personid as person_id
+    storeid as store_id
+    territoryid as territoryid
+  from  `desafioaethaina`.`dev_thaina`.`customer`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:28.947025 [error] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:40909aee-09ff-42ea-b91b-1792c92fc5d5&page=queryresults
+[0m13:12:28.948030 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_sales_order_detail (execute): 2023-06-25 13:12:27.663627 => 2023-06-25 13:12:28.947911
+[0m13:12:28.949894 [debug] [Thread-2 (]: Database Error in model stg_sales_order_detail (models/silver/purchasing/stg_sales_order_detail.sql)
+  Syntax error: Expected ")" but got identifier "personid" at [14:5]
+  compiled Code at target/run/desafioaethaina/models/silver/purchasing/stg_sales_order_detail.sql
+[0m13:12:28.950869 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9704c14b0>]}
+[0m13:12:28.951761 [error] [Thread-2 (]: 14 of 18 ERROR creating sql table model dev_thaina_silver.stg_sales_order_detail  [[31mERROR[0m in 1.29s]
+[0m13:12:28.953339 [debug] [Thread-2 (]: Finished running node model.desafioaethaina.stg_sales_order_detail
+[0m13:12:28.954294 [debug] [Thread-2 (]: Began running node model.desafioaethaina.stg_sales_order_header_reason
+[0m13:12:28.955131 [info ] [Thread-2 (]: 16 of 18 START sql table model dev_thaina_silver.stg_sales_order_header_reason . [RUN]
+[0m13:12:28.960039 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_sales_order_header_reason'
+[0m13:12:28.960737 [debug] [Thread-2 (]: Began compiling node model.desafioaethaina.stg_sales_order_header_reason
+[0m13:12:28.966520 [debug] [Thread-2 (]: Writing injected SQL for node "model.desafioaethaina.stg_sales_order_header_reason"
+[0m13:12:28.971576 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_sales_order_header_reason (compile): 2023-06-25 13:12:28.961564 => 2023-06-25 13:12:28.971322
+[0m13:12:28.972304 [debug] [Thread-2 (]: Began executing node model.desafioaethaina.stg_sales_order_header_reason
+[0m13:12:28.989895 [debug] [Thread-2 (]: Writing runtime sql for node "model.desafioaethaina.stg_sales_order_header_reason"
+[0m13:12:28.990740 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:12:28.995765 [debug] [Thread-2 (]: On model.desafioaethaina.stg_sales_order_header_reason: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_sales_order_header_reason"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_sales_order_header_reason`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select
+    customerid as customer_id personid as person_id storeid as store_id territoryid as territoryid
+  from
+    { { source('source_dw', 'customer') } }
+)
+select
+  *
+from
+  source_data
+    );
+  
+[0m13:12:29.545118 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:bfddb051-4b6f-4f08-9cdd-23acd6e9a66b&page=queryresults
+[0m13:12:29.548055 [debug] [Thread-3 (]: Timing info for model.desafioaethaina.stg_model (execute): 2023-06-25 13:12:25.187604 => 2023-06-25 13:12:29.547927
+[0m13:12:29.549173 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97049e590>]}
+[0m13:12:29.549745 [info ] [Thread-3 (]: 12 of 18 OK created sql table model dev_thaina_silver.stg_model ................ [[32mCREATE TABLE (128.0 rows, 3.2 KB processed)[0m in 4.37s]
+[0m13:12:29.550576 [debug] [Thread-3 (]: Finished running node model.desafioaethaina.stg_model
+[0m13:12:29.551279 [debug] [Thread-3 (]: Began running node model.desafioaethaina.stg_subcategory
+[0m13:12:29.551819 [info ] [Thread-3 (]: 17 of 18 START sql table model dev_thaina_silver.stg_subcategory ............... [RUN]
+[0m13:12:29.553169 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_subcategory'
+[0m13:12:29.553614 [debug] [Thread-3 (]: Began compiling node model.desafioaethaina.stg_subcategory
+[0m13:12:29.557398 [debug] [Thread-3 (]: Writing injected SQL for node "model.desafioaethaina.stg_subcategory"
+[0m13:12:29.558256 [debug] [Thread-3 (]: Timing info for model.desafioaethaina.stg_subcategory (compile): 2023-06-25 13:12:29.553837 => 2023-06-25 13:12:29.558124
+[0m13:12:29.558916 [debug] [Thread-3 (]: Began executing node model.desafioaethaina.stg_subcategory
+[0m13:12:29.563944 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:12:29.794999 [debug] [Thread-4 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected ")" but got identifier "personid" at [14:5]')
+[0m13:12:29.902928 [debug] [Thread-2 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected ")" but got identifier "personid" at [13:31]')
+[0m13:12:30.299554 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:11a84241-f7c0-452a-9ccb-a97cb8516e47&page=queryresults
+[0m13:12:30.305350 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_product (execute): 2023-06-25 13:12:26.525412 => 2023-06-25 13:12:30.305278
+[0m13:12:30.306442 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd970492fb0>]}
+[0m13:12:30.307036 [info ] [Thread-1 (]: 13 of 18 OK created sql table model dev_thaina_silver.stg_product .............. [[32mCREATE TABLE (504.0 rows, 41.4 KB processed)[0m in 3.79s]
+[0m13:12:30.307561 [debug] [Thread-1 (]: Finished running node model.desafioaethaina.stg_product
+[0m13:12:30.464362 [debug] [Thread-3 (]: Writing runtime sql for node "model.desafioaethaina.stg_subcategory"
+[0m13:12:30.465275 [debug] [Thread-3 (]: On model.desafioaethaina.stg_subcategory: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_subcategory"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_subcategory`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    productsubcategoryid as subcategory_id
+    , productcategoryid as category_id
+    , name as subcategory_name
+  from  `desafioaethaina`.`dev_thaina`.`productsubcategory`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:12:30.825305 [error] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:7f1c80f9-6fd6-487e-948d-5830f58bbefb&page=queryresults
+[0m13:12:30.826292 [debug] [Thread-4 (]: Timing info for model.desafioaethaina.stg_sales_order_header (execute): 2023-06-25 13:12:28.855719 => 2023-06-25 13:12:30.826156
+[0m13:12:30.828144 [error] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:00a15933-e9f3-4617-8ba2-3057e1d21e53&page=queryresults
+[0m13:12:30.829543 [debug] [Thread-2 (]: Timing info for model.desafioaethaina.stg_sales_order_header_reason (execute): 2023-06-25 13:12:28.972805 => 2023-06-25 13:12:30.829338
+[0m13:12:30.832237 [debug] [Thread-2 (]: Database Error in model stg_sales_order_header_reason (models/silver/purchasing/stg_sales_order_header_reason.sql)
+  Syntax error: Expected ")" but got identifier "personid" at [13:31]
+  compiled Code at target/run/desafioaethaina/models/silver/purchasing/stg_sales_order_header_reason.sql
+[0m13:12:30.833030 [debug] [Thread-4 (]: Database Error in model stg_sales_order_header (models/silver/purchasing/stg_sales_order_header.sql)
+  Syntax error: Expected ")" but got identifier "personid" at [14:5]
+  compiled Code at target/run/desafioaethaina/models/silver/purchasing/stg_sales_order_header.sql
+[0m13:12:30.833730 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97020b100>]}
+[0m13:12:30.834554 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd973d88ee0>]}
+[0m13:12:30.835501 [error] [Thread-2 (]: 16 of 18 ERROR creating sql table model dev_thaina_silver.stg_sales_order_header_reason  [[31mERROR[0m in 1.87s]
+[0m13:12:30.836363 [error] [Thread-4 (]: 15 of 18 ERROR creating sql table model dev_thaina_silver.stg_sales_order_header  [[31mERROR[0m in 1.99s]
+[0m13:12:30.837154 [debug] [Thread-2 (]: Finished running node model.desafioaethaina.stg_sales_order_header_reason
+[0m13:12:30.837644 [debug] [Thread-4 (]: Finished running node model.desafioaethaina.stg_sales_order_header
+[0m13:12:34.307005 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:af720799-a020-4b0d-97ed-d5ae200f5a20&page=queryresults
+[0m13:12:34.310888 [debug] [Thread-3 (]: Timing info for model.desafioaethaina.stg_subcategory (execute): 2023-06-25 13:12:29.559394 => 2023-06-25 13:12:34.310795
+[0m13:12:34.312285 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97049f7f0>]}
+[0m13:12:34.313194 [info ] [Thread-3 (]: 17 of 18 OK created sql table model dev_thaina_silver.stg_subcategory .......... [[32mCREATE TABLE (37.0 rows, 995.0 Bytes processed)[0m in 4.76s]
+[0m13:12:34.314287 [debug] [Thread-3 (]: Finished running node model.desafioaethaina.stg_subcategory
+[0m13:12:34.315461 [debug] [Thread-1 (]: Began running node model.desafioaethaina.int_product
+[0m13:12:34.316305 [info ] [Thread-1 (]: 18 of 18 START sql view model dev_thaina_intermediate.int_product .............. [RUN]
+[0m13:12:34.317807 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.desafioaethaina.int_product'
+[0m13:12:34.318428 [debug] [Thread-1 (]: Began compiling node model.desafioaethaina.int_product
+[0m13:12:34.331357 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.int_product"
+[0m13:12:34.332458 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.int_product (compile): 2023-06-25 13:12:34.318805 => 2023-06-25 13:12:34.332311
+[0m13:12:34.333338 [debug] [Thread-1 (]: Began executing node model.desafioaethaina.int_product
+[0m13:12:34.396247 [debug] [Thread-1 (]: Writing runtime sql for node "model.desafioaethaina.int_product"
+[0m13:12:34.396903 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:12:34.398695 [debug] [Thread-1 (]: On model.desafioaethaina.int_product: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.int_product"} */
+
+
+  create or replace view `desafioaethaina`.`dev_thaina_intermediate`.`int_product`
+  OPTIONS()
+  as with product as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_product` 
+)
+
+, subcategory as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_subcategory`
+)
+
+, category as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_category`
+)
+
+, inventory as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_inventory`
+)
+
+, location as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_location`
+)
+
+, model as (
+    select * 
+    from `desafioaethaina`.`dev_thaina_silver`.`stg_model`
+)
+
+, union_all as (
+    select 
+        product.product_id
+        , product_model_id
+        , subcategory_id
+        , category.category_id
+        , location.location_id
+        , category_name
+        , subcategory_name
+        , product_name
+        , product_number
+        , makeflag
+        , finished_goods_flag
+        , color
+        , safety_stock_level
+        , stand_cost
+        , list_price
+        , size_product
+        , style_product
+        , weight_product
+        , location_name
+        , cost_rate
+        , availability
+        , shelf
+        , bin
+        , quantity_inventory
+        , model_name
+    from product
+    left join subcategory
+    on product.product_subcategory_id = subcategory.subcategory_id
+    left join category
+    on subcategory.category_id = category.category_id
+    left join inventory 
+    on inventory.product_id = product.product_id
+  	left join location
+  	on location.location_id = inventory.location_id
+    left join model
+    on product.product_model_id = model.model_id
+)
+
+select * 
+from union_all;
+
+
+[0m13:12:36.179705 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:60fad1ba-f690-4c85-a7ed-d6d9018afb1e&page=queryresults
+[0m13:12:36.183907 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.int_product (execute): 2023-06-25 13:12:34.333879 => 2023-06-25 13:12:36.183762
+[0m13:12:36.185254 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '251fb777-e222-4360-93e7-6d476eeb949b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97886d7b0>]}
+[0m13:12:36.185900 [info ] [Thread-1 (]: 18 of 18 OK created sql view model dev_thaina_intermediate.int_product ......... [[32mCREATE VIEW (0 processed)[0m in 1.87s]
+[0m13:12:36.186671 [debug] [Thread-1 (]: Finished running node model.desafioaethaina.int_product
+[0m13:12:36.188947 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:12:36.190072 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:12:36.190556 [debug] [MainThread]: Connection 'model.desafioaethaina.stg_subcategory' was properly closed.
+[0m13:12:36.190960 [debug] [MainThread]: Connection 'model.desafioaethaina.int_product' was properly closed.
+[0m13:12:36.191485 [debug] [MainThread]: Connection 'model.desafioaethaina.stg_sales_order_header_reason' was properly closed.
+[0m13:12:36.192138 [debug] [MainThread]: Connection 'model.desafioaethaina.stg_sales_order_header' was properly closed.
+[0m13:12:36.192854 [info ] [MainThread]: 
+[0m13:12:36.193839 [info ] [MainThread]: Finished running 17 table models, 1 view model in 0 hours 0 minutes and 23.53 seconds (23.53s).
+[0m13:12:36.196557 [debug] [MainThread]: Command end result
+[0m13:12:36.224452 [info ] [MainThread]: 
+[0m13:12:36.225530 [info ] [MainThread]: [31mCompleted with 5 errors and 0 warnings:[0m
+[0m13:12:36.226569 [info ] [MainThread]: 
+[0m13:12:36.227159 [error] [MainThread]: [33mDatabase Error in model stg_address (models/silver/person/stg_address.sql)[0m
+[0m13:12:36.227839 [error] [MainThread]:   Syntax error: Expected ")" but got identifier "address" at [18:25]
+[0m13:12:36.228544 [error] [MainThread]:   compiled Code at target/run/desafioaethaina/models/silver/person/stg_address.sql
+[0m13:12:36.229202 [info ] [MainThread]: 
+[0m13:12:36.229958 [error] [MainThread]: [33mDatabase Error in model stg_currency_rate (models/silver/purchasing/stg_currency_rate.sql)[0m
+[0m13:12:36.230613 [error] [MainThread]:   Syntax error: Unexpected "{" at [19:12]
+[0m13:12:36.231299 [error] [MainThread]:   compiled Code at target/run/desafioaethaina/models/silver/purchasing/stg_currency_rate.sql
+[0m13:12:36.232206 [info ] [MainThread]: 
+[0m13:12:36.233277 [error] [MainThread]: [33mDatabase Error in model stg_sales_order_detail (models/silver/purchasing/stg_sales_order_detail.sql)[0m
+[0m13:12:36.234200 [error] [MainThread]:   Syntax error: Expected ")" but got identifier "personid" at [14:5]
+[0m13:12:36.235035 [error] [MainThread]:   compiled Code at target/run/desafioaethaina/models/silver/purchasing/stg_sales_order_detail.sql
+[0m13:12:36.235810 [info ] [MainThread]: 
+[0m13:12:36.236705 [error] [MainThread]: [33mDatabase Error in model stg_sales_order_header_reason (models/silver/purchasing/stg_sales_order_header_reason.sql)[0m
+[0m13:12:36.237588 [error] [MainThread]:   Syntax error: Expected ")" but got identifier "personid" at [13:31]
+[0m13:12:36.238086 [error] [MainThread]:   compiled Code at target/run/desafioaethaina/models/silver/purchasing/stg_sales_order_header_reason.sql
+[0m13:12:36.238654 [info ] [MainThread]: 
+[0m13:12:36.239365 [error] [MainThread]: [33mDatabase Error in model stg_sales_order_header (models/silver/purchasing/stg_sales_order_header.sql)[0m
+[0m13:12:36.240114 [error] [MainThread]:   Syntax error: Expected ")" but got identifier "personid" at [14:5]
+[0m13:12:36.240757 [error] [MainThread]:   compiled Code at target/run/desafioaethaina/models/silver/purchasing/stg_sales_order_header.sql
+[0m13:12:36.241572 [info ] [MainThread]: 
+[0m13:12:36.242341 [info ] [MainThread]: Done. PASS=13 WARN=0 ERROR=5 SKIP=0 TOTAL=18
+[0m13:12:36.243275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd978784e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd978784dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd97bdf1d20>]}
+[0m13:12:36.243948 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-06-25 13:20:40.147090 | 7dca5955-1acb-444a-9aad-b48e69f40173 ==============================
+[0m13:20:40.147090 [info ] [MainThread]: Running with dbt=1.4.6
+[0m13:20:40.149423 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['stg_sales_order_detail'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m13:20:40.149921 [debug] [MainThread]: Tracking: tracking
+[0m13:20:40.151759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c791926e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c79191e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c791926b0>]}
+[0m13:20:40.181651 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m13:20:40.271938 [debug] [MainThread]: Partial parsing enabled: 7 files deleted, 7 files added, 0 files changed.
+[0m13:20:40.273127 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_sales_order_header.sql
+[0m13:20:40.273530 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_sales_order_detail.sql
+[0m13:20:40.273863 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_currency_rate.sql
+[0m13:20:40.274184 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_currency.sql
+[0m13:20:40.274508 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_customer.sql
+[0m13:20:40.274917 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/sources_sales.yml
+[0m13:20:40.275259 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_sales_order_header_reason.sql
+[0m13:20:40.275573 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_currency.sql
+[0m13:20:40.275794 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_sales_order_detail.sql
+[0m13:20:40.276036 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_sales_order_header_reason.sql
+[0m13:20:40.276277 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_customer.sql
+[0m13:20:40.276517 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_sales_order_header.sql
+[0m13:20:40.276769 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_currency_rate.sql
+[0m13:20:40.343581 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header.sql
+[0m13:20:40.358721 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_detail.sql
+[0m13:20:40.363310 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_currency_rate.sql
+[0m13:20:40.367701 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_currency.sql
+[0m13:20:40.372306 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_customer.sql
+[0m13:20:40.376847 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header_reason.sql
+[0m13:20:40.401171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c7901f100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c7901ee00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c7901f0a0>]}
+[0m13:20:40.401612 [debug] [MainThread]: Flushing usage events
+[0m13:20:42.833663 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.desafioaethaina.stg_sales_order_detail' (models/silver/sales/stg_sales_order_detail.sql) depends on a source named 'source_dw.salesorderdetail' which was not found
+
+
+============================== 2023-06-25 13:21:28.786246 | 6694c141-8e1d-4bb1-a775-f956a7f8dcce ==============================
+[0m13:21:28.786246 [info ] [MainThread]: Running with dbt=1.4.6
+[0m13:21:28.789600 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['stg_sales_order_detail'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m13:21:28.790059 [debug] [MainThread]: Tracking: tracking
+[0m13:21:28.792369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59a0b666e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59a0b65120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59a0b666b0>]}
+[0m13:21:28.818563 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m13:21:28.965399 [debug] [MainThread]: Partial parsing enabled: 7 files deleted, 7 files added, 0 files changed.
+[0m13:21:28.967559 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_sales_order_header.sql
+[0m13:21:28.968083 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_currency.sql
+[0m13:21:28.968404 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_currency_rate.sql
+[0m13:21:28.968762 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/sources_sales.yml
+[0m13:21:28.969134 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_sales_order_header_reason.sql
+[0m13:21:28.969462 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_sales_order_detail.sql
+[0m13:21:28.969749 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_customer.sql
+[0m13:21:28.970115 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_currency.sql
+[0m13:21:28.970538 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_sales_order_detail.sql
+[0m13:21:28.970989 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_sales_order_header.sql
+[0m13:21:28.971507 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_customer.sql
+[0m13:21:28.972139 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_currency_rate.sql
+[0m13:21:28.972555 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_sales_order_header_reason.sql
+[0m13:21:29.122606 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header.sql
+[0m13:21:29.169006 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_currency.sql
+[0m13:21:29.187311 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_currency_rate.sql
+[0m13:21:29.205919 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header_reason.sql
+[0m13:21:29.217286 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_detail.sql
+[0m13:21:29.231780 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_customer.sql
+[0m13:21:29.293139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59a07fa890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59a07fa8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59a07fa590>]}
+[0m13:21:29.294369 [debug] [MainThread]: Flushing usage events
+[0m13:21:30.413265 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Invalid sources config given in models/silver/sales/sources_sales.yml @ sources: {'name': 'source_dw', 'description': 'Sources from DW with dataset od AdventureWorks', 'schema': 'dev_thaina', 'tables': [{'name': 'currency', 'description': 'Lookup table containing standard ISO currencies.'}, {'name': 'currencyrate', 'description': 'Currency exchange rates.'}, {'name': 'customer', 'description': 'Current customer information. Also see the Person and Store tables.'}, {'name': 'salesorderdetail', 'description': 'Individual products associated with a specific sales order. See SalesOrderHeader.'}, {'name': None, 'description': None}, {'name': None, 'description': None}]} - at path ['tables'][4]['name']: None is not of type 'string'
+
+
+============================== 2023-06-25 13:21:50.526292 | 6daf2e49-73bd-4fc7-88b3-39499ce693a1 ==============================
+[0m13:21:50.526292 [info ] [MainThread]: Running with dbt=1.4.6
+[0m13:21:50.528563 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['stg_sales_order_detail'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m13:21:50.529174 [debug] [MainThread]: Tracking: tracking
+[0m13:21:50.530919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59eb3924d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59eb393970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59eb392d70>]}
+[0m13:21:50.555660 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m13:21:50.646746 [debug] [MainThread]: Partial parsing enabled: 7 files deleted, 7 files added, 0 files changed.
+[0m13:21:50.648292 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_currency_rate.sql
+[0m13:21:50.648904 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/sources_sales.yml
+[0m13:21:50.649328 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_sales_order_header_reason.sql
+[0m13:21:50.649695 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_currency.sql
+[0m13:21:50.650046 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_sales_order_header.sql
+[0m13:21:50.650393 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_customer.sql
+[0m13:21:50.650740 [debug] [MainThread]: Partial parsing: added file: desafioaethaina://models/silver/sales/stg_sales_order_detail.sql
+[0m13:21:50.651074 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_sales_order_header_reason.sql
+[0m13:21:50.651311 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_sales_order_header.sql
+[0m13:21:50.651564 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_currency_rate.sql
+[0m13:21:50.651805 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_customer.sql
+[0m13:21:50.652043 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_sales_order_detail.sql
+[0m13:21:50.652281 [debug] [MainThread]: Partial parsing: deleted file: desafioaethaina://models/silver/purchasing/stg_currency.sql
+[0m13:21:50.725298 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_currency_rate.sql
+[0m13:21:50.741644 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header_reason.sql
+[0m13:21:50.746373 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_currency.sql
+[0m13:21:50.750839 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header.sql
+[0m13:21:50.755639 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_customer.sql
+[0m13:21:50.760283 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_detail.sql
+[0m13:21:50.799751 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.desafioaethaina.gold
+[0m13:21:50.810537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6daf2e49-73bd-4fc7-88b3-39499ce693a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59ea8d3e80>]}
+[0m13:21:50.833752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6daf2e49-73bd-4fc7-88b3-39499ce693a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59eb1efeb0>]}
+[0m13:21:50.834523 [info ] [MainThread]: Found 18 models, 0 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 64 seed files, 15 sources, 0 exposures, 0 metrics
+[0m13:21:50.835962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6daf2e49-73bd-4fc7-88b3-39499ce693a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59eb1eff10>]}
+[0m13:21:50.840858 [info ] [MainThread]: 
+[0m13:21:50.845822 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:21:50.847373 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina'
+[0m13:21:50.847926 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:21:52.977295 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina_silver'
+[0m13:21:52.977883 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:21:52.978573 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina'
+[0m13:21:53.016396 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:21:53.017454 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina_intermediate'
+[0m13:21:53.019101 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:21:54.152633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6daf2e49-73bd-4fc7-88b3-39499ce693a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59eb191270>]}
+[0m13:21:54.153624 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:21:54.154128 [info ] [MainThread]: 
+[0m13:21:54.158623 [debug] [Thread-1 (]: Began running node model.desafioaethaina.stg_sales_order_detail
+[0m13:21:54.159213 [info ] [Thread-1 (]: 1 of 1 START sql table model dev_thaina_silver.stg_sales_order_detail .......... [RUN]
+[0m13:21:54.160339 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_sales_order_detail'
+[0m13:21:54.160738 [debug] [Thread-1 (]: Began compiling node model.desafioaethaina.stg_sales_order_detail
+[0m13:21:54.166469 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.stg_sales_order_detail"
+[0m13:21:54.167368 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_sales_order_detail (compile): 2023-06-25 13:21:54.161015 => 2023-06-25 13:21:54.167238
+[0m13:21:54.167955 [debug] [Thread-1 (]: Began executing node model.desafioaethaina.stg_sales_order_detail
+[0m13:21:54.233563 [debug] [Thread-1 (]: Writing runtime sql for node "model.desafioaethaina.stg_sales_order_detail"
+[0m13:21:54.234137 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:21:54.236073 [debug] [Thread-1 (]: On model.desafioaethaina.stg_sales_order_detail: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_sales_order_detail"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_sales_order_detail`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    salesorderid as salesorder_id
+    , salesorderdetail as sales_order_detail
+    -- Shipment tracking number supplied by the shipper.
+    , carriertrackingnumber as carrier_tracking_number
+    , orderqty as order_qty
+    , productid as product_id
+    -- Promotional code. Foreign key to SpecialOffer.SpecialOfferID.
+    , specialofferid as special_offer_id
+    , unitprice as unit_price
+    , unitpricediscount as unit_price_discount
+    /* Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.
+      Computed: isnull(([UnitPrice]*((1.0)-[UnitPriceDiscount]))*[OrderQty],(0.0))*/ 
+    , linetotal as line_total
+  from  `desafioaethaina`.`dev_thaina`.`salesorderdetail`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:21:56.656960 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: linetotal at [25:7]')
+[0m13:21:58.703340 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:d8a9c903-fd9d-4415-85d3-44becfeafda0&page=queryresults
+[0m13:21:58.704283 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_sales_order_detail (execute): 2023-06-25 13:21:54.168391 => 2023-06-25 13:21:58.704133
+[0m13:21:58.707656 [debug] [Thread-1 (]: Database Error in model stg_sales_order_detail (models/silver/sales/stg_sales_order_detail.sql)
+  Unrecognized name: linetotal at [25:7]
+  compiled Code at target/run/desafioaethaina/models/silver/sales/stg_sales_order_detail.sql
+[0m13:21:58.708302 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6daf2e49-73bd-4fc7-88b3-39499ce693a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59eb272230>]}
+[0m13:21:58.709038 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model dev_thaina_silver.stg_sales_order_detail . [[31mERROR[0m in 4.55s]
+[0m13:21:58.712513 [debug] [Thread-1 (]: Finished running node model.desafioaethaina.stg_sales_order_detail
+[0m13:21:58.716052 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:21:58.716914 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:21:58.717266 [debug] [MainThread]: Connection 'list_desafioaethaina_dev_thaina_silver' was properly closed.
+[0m13:21:58.717576 [debug] [MainThread]: Connection 'model.desafioaethaina.stg_sales_order_detail' was properly closed.
+[0m13:21:58.717970 [debug] [MainThread]: Connection 'list_desafioaethaina_dev_thaina_intermediate' was properly closed.
+[0m13:21:58.718712 [info ] [MainThread]: 
+[0m13:21:58.719570 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.88 seconds (7.88s).
+[0m13:21:58.721598 [debug] [MainThread]: Command end result
+[0m13:21:58.746504 [info ] [MainThread]: 
+[0m13:21:58.748028 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m13:21:58.749872 [info ] [MainThread]: 
+[0m13:21:58.750937 [error] [MainThread]: [33mDatabase Error in model stg_sales_order_detail (models/silver/sales/stg_sales_order_detail.sql)[0m
+[0m13:21:58.751926 [error] [MainThread]:   Unrecognized name: linetotal at [25:7]
+[0m13:21:58.752718 [error] [MainThread]:   compiled Code at target/run/desafioaethaina/models/silver/sales/stg_sales_order_detail.sql
+[0m13:21:58.753424 [info ] [MainThread]: 
+[0m13:21:58.754064 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m13:21:58.755576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59eb1efe80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59eb1f9e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59ea962320>]}
+[0m13:21:58.756528 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-06-25 13:22:27.499965 | 390e3d6a-ba2c-4023-afc7-2e412a945ac7 ==============================
+[0m13:22:27.499965 [info ] [MainThread]: Running with dbt=1.4.6
+[0m13:22:27.502156 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['stg_sales_order_detail'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m13:22:27.502709 [debug] [MainThread]: Tracking: tracking
+[0m13:22:27.504412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac4f66680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac4f650c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac4f66650>]}
+[0m13:22:27.535571 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m13:22:27.623085 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:22:27.624433 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/silver/sales/stg_sales_order_detail.sql
+[0m13:22:27.706203 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_detail.sql
+[0m13:22:27.735098 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.desafioaethaina.gold
+[0m13:22:27.743513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '390e3d6a-ba2c-4023-afc7-2e412a945ac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac4c19ff0>]}
+[0m13:22:27.770625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '390e3d6a-ba2c-4023-afc7-2e412a945ac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac4d43850>]}
+[0m13:22:27.771687 [info ] [MainThread]: Found 18 models, 0 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 64 seed files, 15 sources, 0 exposures, 0 metrics
+[0m13:22:27.772378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '390e3d6a-ba2c-4023-afc7-2e412a945ac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac4d43940>]}
+[0m13:22:27.778988 [info ] [MainThread]: 
+[0m13:22:27.785022 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:22:27.786822 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina'
+[0m13:22:27.787341 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:22:28.812634 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina_intermediate'
+[0m13:22:28.813597 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina_silver'
+[0m13:22:28.814151 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:22:28.814975 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafioaethaina_dev_thaina'
+[0m13:22:28.815396 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:22:28.817213 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:22:30.053466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '390e3d6a-ba2c-4023-afc7-2e412a945ac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac4e174f0>]}
+[0m13:22:30.054387 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:22:30.055046 [info ] [MainThread]: 
+[0m13:22:30.059079 [debug] [Thread-1 (]: Began running node model.desafioaethaina.stg_sales_order_detail
+[0m13:22:30.059580 [info ] [Thread-1 (]: 1 of 1 START sql table model dev_thaina_silver.stg_sales_order_detail .......... [RUN]
+[0m13:22:30.060719 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.desafioaethaina.stg_sales_order_detail'
+[0m13:22:30.061187 [debug] [Thread-1 (]: Began compiling node model.desafioaethaina.stg_sales_order_detail
+[0m13:22:30.065617 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.stg_sales_order_detail"
+[0m13:22:30.066365 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_sales_order_detail (compile): 2023-06-25 13:22:30.061412 => 2023-06-25 13:22:30.066261
+[0m13:22:30.066814 [debug] [Thread-1 (]: Began executing node model.desafioaethaina.stg_sales_order_detail
+[0m13:22:30.152019 [debug] [Thread-1 (]: Writing runtime sql for node "model.desafioaethaina.stg_sales_order_detail"
+[0m13:22:30.152635 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:22:30.154610 [debug] [Thread-1 (]: On model.desafioaethaina.stg_sales_order_detail: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.stg_sales_order_detail"} */
+
+  
+    
+
+    create or replace table `desafioaethaina`.`dev_thaina_silver`.`stg_sales_order_detail`
+    
+    
+    OPTIONS()
+    as (
+      with source_data as (
+  select 
+    salesorderid as salesorder_id
+    , salesorderdetail as sales_order_detail
+    -- Shipment tracking number supplied by the shipper.
+    , carriertrackingnumber as carrier_tracking_number
+    , orderqty as order_qty
+    , productid as product_id
+    -- Promotional code. Foreign key to SpecialOffer.SpecialOfferID.
+    , specialofferid as special_offer_id
+    , unitprice as unit_price
+    , unitpricediscount as unit_price_discount
+    /* Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.
+      Computed: isnull(([UnitPrice]*((1.0)-[UnitPriceDiscount]))*[OrderQty],(0.0))*/ 
+  from  `desafioaethaina`.`dev_thaina`.`salesorderdetail`
+)
+
+select *
+from source_data
+    );
+  
+[0m13:22:34.749777 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafioaethaina&j=bq:US:2b660bd2-7e76-4470-a676-47df1086744e&page=queryresults
+[0m13:22:34.766122 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.stg_sales_order_detail (execute): 2023-06-25 13:22:30.067127 => 2023-06-25 13:22:34.766058
+[0m13:22:34.766955 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '390e3d6a-ba2c-4023-afc7-2e412a945ac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac4bd5f60>]}
+[0m13:22:34.767461 [info ] [Thread-1 (]: 1 of 1 OK created sql table model dev_thaina_silver.stg_sales_order_detail ..... [[32mCREATE TABLE (121.3k rows, 14.6 MB processed)[0m in 4.71s]
+[0m13:22:34.769994 [debug] [Thread-1 (]: Finished running node model.desafioaethaina.stg_sales_order_detail
+[0m13:22:34.771798 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:22:34.772560 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:22:34.772860 [debug] [MainThread]: Connection 'list_desafioaethaina_dev_thaina_intermediate' was properly closed.
+[0m13:22:34.773262 [debug] [MainThread]: Connection 'model.desafioaethaina.stg_sales_order_detail' was properly closed.
+[0m13:22:34.773719 [debug] [MainThread]: Connection 'list_desafioaethaina_dev_thaina' was properly closed.
+[0m13:22:34.774229 [info ] [MainThread]: 
+[0m13:22:34.774853 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.99 seconds (6.99s).
+[0m13:22:34.775898 [debug] [MainThread]: Command end result
+[0m13:22:34.791572 [info ] [MainThread]: 
+[0m13:22:34.793096 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:22:34.794331 [info ] [MainThread]: 
+[0m13:22:34.795078 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:22:34.796116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac44d4040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac44d40d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ac44d4100>]}
+[0m13:22:34.796750 [debug] [MainThread]: Flushing usage events
