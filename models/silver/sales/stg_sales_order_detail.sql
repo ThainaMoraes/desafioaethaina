@@ -7,7 +7,7 @@ with source_data as (
     , orderqty as order_qty
     , productid as product_id
     -- Promotional code. Foreign key to SpecialOffer.SpecialOfferID.
-    , specialofferid as special_offer_id
+    -- , specialofferid as special_offer_id
     , unitprice as unit_price
     , unitpricediscount as unit_price_discount
     /* Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.

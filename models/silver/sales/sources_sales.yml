@@ -43,3 +43,6 @@ sources:
 
       - name: store
         description: Customers (resellers) of Adventure Works products.
+      
+      - name: countryregioncurrency
+        description: Cross-reference table mapping ISO currency codes to a country or region.
