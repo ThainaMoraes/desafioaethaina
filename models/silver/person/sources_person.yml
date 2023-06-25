@@ -16,6 +16,15 @@ sources:
 
       - name: countryregion
         description: Lookup table containing the ISO standard codes for countries and regions.
+      
+      - name: businessentityaddress
+        description: Cross-reference table mapping customers, vendors, and employees to their addresses.
 
-
+      - name: businessentitycontact
+        description: Cross-reference table mapping stores, vendors, and employees to people
         
+      - name: person
+        description: Human beings involved with AdventureWorks - employees, customer contacts, and vendor contacts.
+
+      - name: stateprovince
+        description: State and province lookup table.

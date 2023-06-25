@@ -5,7 +5,7 @@ with source_data as (
     , addressline2 as address_line2
     , city
     , stateprovinceid as state_province_id
-    , postalcode Street address information for customers, employees, and vendors.
+    , postalcode as postal_code
   from  {{source('source_dw','address')}}
 )
 

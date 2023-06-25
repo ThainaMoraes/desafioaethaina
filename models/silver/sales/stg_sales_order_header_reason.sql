@@ -1,10 +1,9 @@
 with source_data as (
   select
-    customerid as customer_id personid as person_id storeid as store_id territoryid as territoryid
+    salesorderid as sales_order_id
+    , salesreasonid as sales_reason_id
   from
-    { { source('source_dw', 'customer') } }
+    {{ source('source_dw', 'salesorderheadersalesreason') }}
 )
-select
-  *
-from
-  source_data
+select  *
+from  source_data

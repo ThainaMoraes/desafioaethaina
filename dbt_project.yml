@@ -32,6 +32,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   desafioaethaina:
+    +persist_docs:
+      relation: true
+      columns: true
+    +file_format: delta
     # Config indicated by + and applies to all files under models/example/
     gold:
       +materialized: table
@@ -44,5 +48,6 @@ models:
     silver:
       +materialized: table
       +schema: silver
+    
 
 

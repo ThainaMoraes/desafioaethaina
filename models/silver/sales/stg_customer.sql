@@ -3,7 +3,7 @@ with source_data as (
     customerid as customer_id
     , personid as person_id
     , storeid as store_id
-    , territoryid as territoryid
+    , territoryid as territory_id
   from  {{source('source_dw','customer')}}
 )
 

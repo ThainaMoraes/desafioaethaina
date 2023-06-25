@@ -1,7 +1,7 @@
 with source_data as (
   select 
-    salesorderid as salesorder_id
-    , salesorderdetail as sales_order_detail
+    salesorderid as sales_order_id
+    , salesorderdetailid as sales_order_detail_id
     -- Shipment tracking number supplied by the shipper.
     , carriertrackingnumber as carrier_tracking_number
     , orderqty as order_qty
@@ -11,7 +11,7 @@ with source_data as (
     , unitprice as unit_price
     , unitpricediscount as unit_price_discount
     /* Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.
-      Computed: isnull(([UnitPrice]*((1.0)-[UnitPriceDiscount]))*[OrderQty],(0.0))*/ 
+      Computed: isnull(([UnitPrice]*((1.0)-[UnitPriceDiscount]))*[OrderQty],(0.0))* era o linetotal*/ 
   from  {{source('source_dw','salesorderdetail')}}
 )
 

@@ -17,8 +17,29 @@ sources:
       - name: salesorderdetail
         description: Individual products associated with a specific sales order. See SalesOrderHeader.
 
-      # - name: 
-      #   description: 
+      - name: salesorderheader
+        description: General sales order information.
       
-      # - name:   
-      #   description:
+      - name: salesorderheadersalesreason 
+        description: General sales order information.
+
+      - name: salesperson
+        description: Sales representative current information.
+
+      - name: salespersonquotahistory
+        description: Sales performance tracking.
+      
+      - name: salesreason
+        description: Sales performance tracking.
+
+      - name: salestaxrate
+        description: Tax rate lookup table.
+
+      - name: salesterritory
+        description: Sales territory lookup table.
+
+      - name: salesterritoryhistory
+        description: Sales representative transfers to other sales territories.
+
+      - name: store
+        description: Customers (resellers) of Adventure Works products.
