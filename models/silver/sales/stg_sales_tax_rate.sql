@@ -6,7 +6,6 @@ with
       , taxtype as tax_type
       , taxrate as tax_rate
       , name as name_tax_rate_desciption
-      , rowguid
     from {{ source('source_dw', 'salestaxrate') }}
   )
 

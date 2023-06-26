@@ -4,7 +4,6 @@ with source_data as (
     , name as shipping_company_name
     , shipbase as ship_base
     , shiprate as ship_rate
-    , rowguid
   from  {{source('source_dw','shipmethod')}}
 )
 

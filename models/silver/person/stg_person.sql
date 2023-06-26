@@ -9,7 +9,6 @@ with source_data as (
     , lastname as last_name
     , suffix
     , emailpromotion as email_promotion 
-    , rowguid
   from  {{source('source_dw','person')}}
 )
 

@@ -23,7 +23,6 @@ with source_data as (
     /*Total due from customer. Computed as Subtotal + TaxAmt + Freight.
       Computed: isnull(([SubTotal]+[TaxAmt])+[Freight],(0)) */
     , totaldue as total_due
-    , rowguid
   from
     {{ source('source_dw', 'salesorderheader') }}
 )
