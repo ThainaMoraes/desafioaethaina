@@ -1,4 +1,4 @@
-/* {{
+{{
     config(materialized='table')
 }}
 
@@ -9,27 +9,27 @@ with product as (
 
 , subcategory as (
     select * 
-    from {{ ref('stg_subcategory') }}
+    from {{ ref('stg_product_subcategory') }}
 )
 
 , category as (
     select * 
-    from {{ ref('stg_category') }}
+    from {{ ref('stg_product_category') }}
 )
 
 , inventory as (
     select * 
-    from {{ ref('stg_inventory') }}
+    from {{ ref('stg_product_inventory') }}
 )
 
 , location as (
     select * 
-    from {{ ref('stg_location') }}
+    from {{ ref('stg_product_location') }}
 )
 
 , model as (
     select * 
-    from {{ ref('stg_model') }}
+    from {{ ref('stg_product_model') }}
 )
 
 , union_all as (
@@ -74,5 +74,3 @@ with product as (
 
 select * 
 from union_all
-
-*/

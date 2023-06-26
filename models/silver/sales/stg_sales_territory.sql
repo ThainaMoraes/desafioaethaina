@@ -8,7 +8,7 @@ with source_data as (
         , saleslastyear as sales_last_year
         , costytd as bussiness_cost_in_territory
         , costlastyear as bussiness_cost_in_territory_last_year
-        , rowguid
+        , rowguid  rowguid_sales_territory
     from {{ source('source_dw', 'salesterritory') }}
   )
 
