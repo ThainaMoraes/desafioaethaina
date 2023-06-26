@@ -2,41 +2,36 @@
     config(materialized='table')
 }}
 
-with customer as (
+with order_header as (
 	select * 
-    from `dev_thaina_silver.int_sales_customer`
+	from `dev_thaina_silver.stg_sales_order_header`	
 )
 
-, sales_territory as (
+, order_header_reason as (
 	select * 
-    from `dev_thaina_silver.stg_sales_territory`
+	from `dev_thaina_silver.stg_sales_order_header_reason`	
 )
 
-, person_person as (
+, order_detail as (
 	select * 
-    from `dev_thaina_silver.stg_person_person`
+	from `dev_thaina_silver.stg_sales_order_detail`	
 )
 
-, person_country as (
-	select * 
-    from `dev_thaina_silver.stg_person_country_region`
+, union_header_reason as (
+	select 
+		order_header.*
+		, sales_reason_id
+		, sales_order_detail_id
+		, carrier_tracking_number
+		, order_qty
+		, product_id
+		, unit_price
+		, unit_price_discount
+	from order_header
+	left join order_header_reason
+	on order_header_reason.sales_order_id = order_header.sales_order_id
+	left join order_detail 
+	on order_detail.sales_order_id =  order_header.sales_order_id
 )
 
-, state_province as (
-	select * 
-    from `dev_thaina_silver.stg_person_state_province`
-)
-
-, union_customer_person as (
-	select
-		customer.*
-		, person_person.*
-	from person_person
-	left join customer
-	on customer.customer_id = person_person.business_entity_id 
-)
-
-
-select * 
-from union_customer_country
-
+select * from union_header_reason
