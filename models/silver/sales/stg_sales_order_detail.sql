@@ -12,6 +12,7 @@ with source_data as (
     , unitpricediscount as unit_price_discount
     /* Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.
       Computed: isnull(([UnitPrice]*((1.0)-[UnitPriceDiscount]))*[OrderQty],(0.0))* era o linetotal*/ 
+    , rowguid
   from  {{source('source_dw','salesorderdetail')}}
 )
 

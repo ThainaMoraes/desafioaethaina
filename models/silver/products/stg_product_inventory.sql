@@ -5,6 +5,7 @@ with source_data as (
     , shelf
     , bin
     , quantity as quantity_inventory
+    , rowguid
   from  {{source('source_dw','productinventory')}}
 )
 

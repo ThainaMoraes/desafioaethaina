@@ -6,6 +6,7 @@ with source_data as (
     , city
     , stateprovinceid as state_province_id
     , postalcode as postal_code
+    , rowguid
   from  {{source('source_dw','address')}}
 )
 

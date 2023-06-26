@@ -14,6 +14,7 @@ with source_data as (
     , size as size_product
     , style as style_product
     , weight as weight_product 
+    , rowguid
   from  {{ source('source_dw','product') }}
 )
 
