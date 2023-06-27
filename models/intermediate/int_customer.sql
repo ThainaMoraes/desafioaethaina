@@ -4,27 +4,27 @@
 
 with customer as (
 	select * 
-    from `dev_thaina_silver.stg_sales_customer`
+    from {{ ref('stg_sales_customer') }}
 )
 
 , sales_territory as (
 	select * 
-    from `dev_thaina_silver.stg_sales_territory`
+    from {{ ref('stg_sales_territory') }}
 )
 
 , person_person as (
 	select * 
-    from `dev_thaina_silver.stg_person_person`
+    from {{ ref('stg_person_person') }}
 )
 
 , person_country as (
 	select * 
-    from `dev_thaina_silver.stg_person_country_region`
+    from {{ ref('stg_person_country_region') }}
 )
 
 , state_province as (
 	select * 
-    from `dev_thaina_silver.stg_person_state_province`
+    from {{ ref('stg_person_state_province') }}
 )
 
 , union_customer_person as (
@@ -36,17 +36,50 @@ with customer as (
 	on customer.customer_id = person_person.business_entity_id 
 )
 
+, transformed as (
+	select
+		customer_id
+		, case
+			when person_type = 'SC' 
+				then 'Store Contact'
+			when person_type = 'IN' 
+				then 'Individual Customer'
+			when person_type = 'SP' 
+				then 'Sales person'
+			when person_type = 'EM' 
+				then 'Employee'  
+			when person_type = 'VC' 
+				then 'Vendor'
+			when person_type = 'GC'
+				then 'General contact'
+		end as person_type
+		, name_style
+		, courtesy_title
+		, case 
+			when middle_name is not null
+				then concat(first_name, ' ', middle_name, ' ',last_name)
+			else concat(first_name, ' ',last_name)
+		end as full_name
+		, suffix
+		, email_promotion
+		, person_id
+		, store_id
+		, territory_id 
+	from union_customer_person
+
+)
+
 , union_customer_territory as (
 	select
-		union_customer_person.*
+		transformed.*
 		, name_territory_description
         , country_region_code
         , group_geo
         , sales_territory_year
         , bussiness_cost_in_territory
 		from sales_territory
-		left join union_customer_person
-		on union_customer_person.territory_id =  sales_territory.territory_id
+		left join transformed
+		on transformed.territory_id =  sales_territory.territory_id
 )
 
 , union_customer_country as (

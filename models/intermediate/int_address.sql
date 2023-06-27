@@ -1,25 +1,21 @@
-{{
-    config(materialized='table')
-}}
-
 with address as (
 	select * 
-    from `dev_thaina_silver.stg_person_address`
+    from {{ ref('stg_person_address') }}
 )
 
 , address_type as (
 	select * 
-    from `dev_thaina_silver.stg_person_address_type`
+    from {{ ref('stg_person_address_type') }}
 )
 
 , business_entity_address as (
 	select * 
-    from `dev_thaina_silver.stg_person_business_entity_address`
+    from {{ ref('stg_person_business_entity_address') }}
 )
 
 , business_entity_contact as (
 	select * 
-    from `dev_thaina_silver.stg_person_business_entity_contact`
+    from {{ ref('stg_person_business_entity_contact') }}
 )
 
 , union_address_business_address as (

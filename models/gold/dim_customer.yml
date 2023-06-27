@@ -1,0 +1,30 @@
+version: 2
+
+models:
+
+  - name: dim_customer
+    description: This table contains information about customers of Adventure Works
+    columns:
+      - name: customer_sk
+        description: Single promo record.
+        tests:
+          - not_null
+          - unique
+
+      - name: suffix
+        description: Customer's full name
+
+      - name: store_id
+        # description: Month of metric_date.
+
+      - name: territory_id
+        # description: Year of metric_date.
+
+      - name: person_type
+        # description: Quarter of metric_date.
+
+      - name: name_style
+        # description: Full name of the month of the year.
+        
+      - name: courtesy_title
+        # description: Full name of the month of the year.

@@ -1,20 +1,16 @@
-{{
-    config(materialized='table')
-}}
-
 with order_header as (
 	select * 
-	from `dev_thaina_silver.stg_sales_order_header`	
+	from {{ ref('stg_sales_order_header') }}	
 )
 
 , order_header_reason as (
 	select * 
-	from `dev_thaina_silver.stg_sales_order_header_reason`	
+	from {{ ref('stg_sales_order_header_reason') }}	
 )
 
 , order_detail as (
 	select * 
-	from `dev_thaina_silver.stg_sales_order_detail`	
+	from {{ ref('stg_sales_order_detail') }}	
 )
 
 , union_header_reason as (

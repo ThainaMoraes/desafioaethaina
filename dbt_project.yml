@@ -42,7 +42,7 @@ models:
       +schema: gold
 
     intermediate:
-      +materializes: table
+      +materialized: table
       +schema: intermediate
       
     silver:

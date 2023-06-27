@@ -1,15 +1,11 @@
-{{
-    config(materialized='table')
-}}
-
 with customer as (
 	select * 
-	from `dev_thaina_intermediate.int_sales_customer`	
+	from {{ ref('int_customer') }}	
 )
 
 , sales as (
 	select * 
-	from `dev_thaina_intermediate.int_sales`	
+	from {{ ref('int_sales') }}	
 )
 
 , union_header_reason as (
@@ -18,13 +14,10 @@ with customer as (
 		, person_id
 		, store_id
 		, customer.territory_id as c_territory_id
-		, business_entity_id
 		, person_type
 		, name_style
 		, courtesy_title
-		, first_name
-		, middle_name
-		, last_name
+		, full_name
 		, suffix
 		, email_promotion
 		, name_territory_description
