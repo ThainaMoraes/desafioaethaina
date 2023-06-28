@@ -12,7 +12,7 @@ with int_customer as (
 
 , customer_with_sk  as (
     select
-        xxhash64(customer_id) as customer_sk
+        row_number() over (order by customer_id) as customer_sk
         , full_name
 		, suffix
 		, store_id

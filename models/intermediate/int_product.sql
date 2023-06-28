@@ -28,45 +28,44 @@ with product as (
     from {{ ref('stg_product_model') }}
 )
 
-, union_all as (
+, union_product_subcategory as (
     select 
-        product.product_id
-        , product_model_id
-        , subcategory_id
-        , category.category_id
-        , location.location_id
-        , category_name
-        , subcategory_name
-        , product_name
-        , product_number
-        , makeflag
-        , finished_goods_flag
-        , color
-        , safety_stock_level
-        , stand_cost
-        , list_price
-        , size_product
-        , style_product
-        , weight_product
-        , location_name
-        , cost_rate
-        , availability
+       product.*
+       , category_id
+       , subcategory_name
+    from subcategory
+    left join product
+    on product.product_subcategory_id = subcategory.subcategory_id
+)
+
+, union_product_category as (
+	select 
+		union_product_subcategory.*
+		, category_name
+	from category
+	left join union_product_subcategory
+    on union_product_subcategory.category_id = category.category_id
+)
+
+, union_product_model as (
+	select 
+		union_product_category.*
+		, model_name
+	from model
+	left join union_product_category
+    on union_product_category.product_model_id = model.model_id
+)
+
+, union_product_inventory as (
+    select 
+        union_product_model.*
+        , quantity_inventory
         , shelf
         , bin
-        , quantity_inventory
-        , model_name
-    from product
-    left join subcategory
-    on product.product_subcategory_id = subcategory.subcategory_id
-    left join category
-    on subcategory.category_id = category.category_id
-    left join inventory 
-    on inventory.product_id = product.product_id
-  	left join location
-  	on location.location_id = inventory.location_id
-    left join model
-    on product.product_model_id = model.model_id
+    from inventory
+    left join union_product_model
+    on union_product_model.product_id = inventory.product_id
 )
 
 select * 
-from union_all
+from union_product_inventory
