@@ -15,4 +15,3 @@ models:
         description: product's name description.
 
       - name: reason_type
-        # description: Month of metric_date.

@@ -13,7 +13,7 @@ with int_person as (
 
 , worker_with_sk  as (
     select
-        row_number() over (order by fixed_person_id) as worker_sk
+        MD5(cast(fixed_person_id as string)) as worker_sk
         , courtesy_title
         , full_name
 		, territory_id 

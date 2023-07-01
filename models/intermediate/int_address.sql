@@ -18,38 +18,39 @@ with address as (
     from {{ ref('stg_person_business_entity_contact') }}
 )
 
-, union_address_business_contact as (
-    select
-        business_entity_address.business_entity_id
-        , address_id
-        , address_type_id
-        , contact_type_id
-        , person_id
-    from business_entity_contact
-    left join  business_entity_address
-    on business_entity_address.business_entity_id = business_entity_contact.business_entity_id
+, contact_type_worker as (
+	select  * 
+    from  {{ ref('stg_person_contact_type') }} 
 )
 
-
-, union_address_type as (
+, union_person_addres as (
     select
-        union_address_business_contact.*
-        , address_type_name
-    from address_type
-    left join union_address_business_contact
-    on address_type.address_type_id = union_address_business_contact.address_type_id
-)
-
-, union_address_business_address as (
-    select
-    	union_address_type.*
+        business_entity_address.address_id
+        , business_entity_id
+        , business_entity_address.address_type_id
         , concat(address_line1, ' ', ifnull('',address_line2), ' ', postal_code) as address
         , city
         , state_province_id
-    from union_address_type
-    left join address 
-    on address.address_id = union_address_type.address_id
+        , address_type_name
+    from business_entity_address
+    left join address
+    on address.address_id = business_entity_address.address_id
+   	left join address_type
+   	on address_type.address_type_id = business_entity_address.address_type_id
+)
+
+, union_contact_type as (
+	select 
+		union_person_addres.*
+		, person_id as worker_id
+		, contact_type_worker.contact_type_id 
+		, contact_type_name as contact_type_name_worker
+	from union_person_addres
+	left join business_entity_contact
+	on business_entity_contact.business_entity_id = union_person_addres.business_entity_id 
+	left join contact_type_worker
+	on contact_type_worker.contact_type_id = business_entity_contact.contact_type_id
 )
 
 select * 
-from union_address_business_address
+from union_contact_type

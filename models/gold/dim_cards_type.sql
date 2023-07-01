@@ -15,7 +15,7 @@ with int_sales as (
 
 , credit_card_with_sk  as (
     select
-        row_number() over (order by credit_card_id, credit_card_approval_code) as credit_card_sk
+        MD5(cast(credit_card_id as string)) credit_card_sk
         , card_type
         , credit_card_approval_code
       from deduplication_data

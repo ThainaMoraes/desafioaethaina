@@ -6,26 +6,29 @@ with int_sales as (
 , deduplication_data as (
     select
         *
-        , row_number() over (partition by order by sales_order_id) as dedup_index
+        , row_number() over (partition by sales_order_id, sales_order_detail_id order by sales_order_id) as dedup_index
     from int_sales
 )
 
 , sales_with_sk  as (
     select
-        row_number() over (order by fixed_person_id) as worker_sk
-        , courtesy_title
-        , full_name
-		, territory_id 
-        , person_type
-        , suffix
-        , store_id
-        , email_promotion
-        , name_territory_description
-        , country_region_code
-        , country_region_name
-        , state_province_id
-        , state_province_code
-        , state_province_name
+        row_number() over (order by sales_order_id, sales_order_detail_id) as sale_identifier_sk
+        , sales_order_id 
+        , sales_order_detail_id
+        , order_date
+        , MD5(cast(customer_id as string)) as customer_fk
+        , MD5(cast(sales_person_id as string)) as sales_person_fk
+        , MD5(cast(bill_to_address_id as string)) as bill_to_address_fk
+        , MD5(cast(ship_to_address_id as string)) as ship_to_address_fk
+        , MD5(cast(ship_method_id as string)) as ship_method_fk
+        , MD5(cast(product_id as string)) as product_fk
+        , sub_total
+        , tax_amount
+        , freight
+        , total_due
+        , order_qty
+        , unit_price
+        , unit_price_discount
     from deduplication_data
     where dedup_index = 1
 )

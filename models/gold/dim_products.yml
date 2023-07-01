@@ -2,7 +2,7 @@ version: 2
 
 models:
 
-  - name: dim_product
+  - name: dim_products
     description: This table contains information about products of Adventure Works
     columns:
       - name: product_sk

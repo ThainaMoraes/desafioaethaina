@@ -1,6 +1,7 @@
 with int_product as (
     select *
     from {{ ref('int_product') }}
+    where product_id is not null
 )
 
 , deduplication_data as (
@@ -8,11 +9,12 @@ with int_product as (
         *
         , row_number() over (partition by product_id order by product_id) as dedup_index
     from int_product
+ 
 )
 
 , prodcut_with_sk  as (
     select
-        row_number() over (order by product_id) as product_sk
+        MD5(cast(product_id as string)) as product_sk
         , category_name
         , subcategory_name
         , product_name
@@ -30,8 +32,14 @@ with int_product as (
         , quantity_inventory
         , model_name
       from deduplication_data
-    where dedup_index = 1
+    where dedup_index = 1  
 )
 
+-- , select_not_null as (
+--     select *
+--     from prodcut_with_sk
+--     where product_sk is not null
+-- )
+
 select *
-from prodcut_with_sk
+from prodcut_with_sk 

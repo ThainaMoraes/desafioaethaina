@@ -6,21 +6,19 @@ with int_address as (
 , deduplication_data as (
     select
         *
-        , row_number() over (partition by 
-            business_entity_id
-            , address_type_name 
-        order by business_entity_id) as dedup_index
+        , row_number() over (partition by address_id order by address_id) as dedup_index
     from int_address
 )
 
-, prodcut_with_sk  as (
+, address_with_sk  as (
     select
-        row_number() over (order by business_entity_id) as address_sk
-        , address_id
+        MD5(cast(address_id as string)) address_sk
+        , business_entity_id
         , address_type_id
-        , contact_type_id
-        , person_id
         , address_type_name
+        , worker_id
+        , contact_type_id
+        , contact_type_name_worker
         , address
         , city
         , state_province_id
@@ -29,4 +27,4 @@ with int_address as (
 )
 
 select *
-from prodcut_with_sk
+from address_with_sk

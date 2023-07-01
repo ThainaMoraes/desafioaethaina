@@ -33,8 +33,8 @@ with product as (
        product.*
        , category_id
        , subcategory_name
-    from subcategory
-    left join product
+    from product
+    left join subcategory
     on product.product_subcategory_id = subcategory.subcategory_id
 )
 
@@ -42,8 +42,8 @@ with product as (
 	select 
 		union_product_subcategory.*
 		, category_name
-	from category
-	left join union_product_subcategory
+	from union_product_subcategory
+	left join category
     on union_product_subcategory.category_id = category.category_id
 )
 
@@ -51,8 +51,8 @@ with product as (
 	select 
 		union_product_category.*
 		, model_name
-	from model
-	left join union_product_category
+	from union_product_category
+	left join model
     on union_product_category.product_model_id = model.model_id
 )
 
@@ -62,8 +62,8 @@ with product as (
         , quantity_inventory
         , shelf
         , bin
-    from inventory
-    left join union_product_model
+    from union_product_model
+    left join inventory
     on union_product_model.product_id = inventory.product_id
 )
 
