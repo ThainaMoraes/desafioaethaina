@@ -1,7 +1,3 @@
-/* {{
-    config(materialized='table')
-}}
-
 with product as (
     select * 
     from {{ ref('stg_product') }} 
@@ -9,70 +5,67 @@ with product as (
 
 , subcategory as (
     select * 
-    from {{ ref('stg_subcategory') }}
+    from {{ ref('stg_product_subcategory') }}
 )
 
 , category as (
     select * 
-    from {{ ref('stg_category') }}
+    from {{ ref('stg_product_category') }}
 )
 
 , inventory as (
     select * 
-    from {{ ref('stg_inventory') }}
+    from {{ ref('stg_product_inventory') }}
 )
 
 , location as (
     select * 
-    from {{ ref('stg_location') }}
+    from {{ ref('stg_product_location') }}
 )
 
 , model as (
     select * 
-    from {{ ref('stg_model') }}
+    from {{ ref('stg_product_model') }}
 )
 
-, union_all as (
+, union_product_subcategory as (
     select 
-        product.product_id
-        , product_model_id
-        , subcategory_id
-        , category.category_id
-        , location.location_id
-        , category_name
-        , subcategory_name
-        , product_name
-        , product_number
-        , makeflag
-        , finished_goods_flag
-        , color
-        , safety_stock_level
-        , stand_cost
-        , list_price
-        , size_product
-        , style_product
-        , weight_product
-        , location_name
-        , cost_rate
-        , availability
-        , shelf
-        , bin
-        , quantity_inventory
-        , model_name
+       product.*
+       , category_id
+       , subcategory_name
     from product
     left join subcategory
     on product.product_subcategory_id = subcategory.subcategory_id
-    left join category
-    on subcategory.category_id = category.category_id
-    left join inventory 
-    on inventory.product_id = product.product_id
-  	left join location
-  	on location.location_id = inventory.location_id
-    left join model
-    on product.product_model_id = model.model_id
+)
+
+, union_product_category as (
+	select 
+		union_product_subcategory.*
+		, category_name
+	from union_product_subcategory
+	left join category
+    on union_product_subcategory.category_id = category.category_id
+)
+
+, union_product_model as (
+	select 
+		union_product_category.*
+		, model_name
+	from union_product_category
+	left join model
+    on union_product_category.product_model_id = model.model_id
+)
+
+, union_product_inventory as (
+    select 
+        union_product_model.*
+        , quantity_inventory
+        , shelf
+        , bin
+    from union_product_model
+    left join inventory
+    on union_product_model.product_id = inventory.product_id
 )
 
 select * 
-from union_all
-
-*/
+from union_product_inventory

@@ -1,0 +1,55 @@
+version: 2
+
+models:
+
+  - name: fact_sales
+    description: Fact table containing Letts information about PepsiCo sales.
+    columns:
+      - name: sale_identifier_sk
+        description: Unique identifier for each row on the fact table
+        tests:
+          - not_null
+          - unique
+
+      - name: order_date
+        description: Date of sale.
+        tests:
+          - relationships:
+              to: ref('dim_dates')
+              field: metric_date
+
+      - name: customer_fk
+        description: User foreign key.
+        tests:
+          - relationships:
+              to: ref('dim_costumers')
+              field: customer_sk      
+
+      - name: product_fk
+        description: User foreign key.
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_sk      
+
+      - name: sales_person_fk
+        description: User foreign key.
+        tests:
+          - relationships:
+              to: ref('dim_workers')
+              field: worker_sk      
+
+      - name: bill_to_address_fk
+        description: User foreign key.
+        tests:
+          - relationships:
+              to: ref('dim_address')
+              field: address_sk      
+
+      - name: ship_to_address_fk
+        description: User foreign key.
+        tests:
+          - relationships:
+              to: ref('dim_address')
+              field: address_sk      
+ 

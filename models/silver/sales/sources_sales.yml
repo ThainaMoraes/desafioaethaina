@@ -46,3 +46,5 @@ sources:
       
       - name: countryregioncurrency
         description: Cross-reference table mapping ISO currency codes to a country or region.
+
+      - name: creditcard
