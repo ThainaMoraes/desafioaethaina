@@ -2,10 +2,10 @@ version: 2
 
 models:
 
-  - name: dim_customer
-    description: This table contains information about customers of Adventure Works
+  - name: dim_workers
+    description: This table contains information about workers of Adventure Works
     columns:
-      - name: customer_sk
+      - name: worker_sk
         description: Single promo record.
         tests:
           - not_null
@@ -13,7 +13,7 @@ models:
 
       - name: full_name
         # description: Year of metric_date.
-        
+
       - name: territory_id
         # description: Year of metric_date.
 
@@ -43,3 +43,4 @@ models:
 
       - name: state_province_name
         # description: Full name of the month of the year.
+

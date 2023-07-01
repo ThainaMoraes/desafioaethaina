@@ -1,0 +1,18 @@
+version: 2
+
+models:
+
+  - name: dim_reason
+    description: This table contains information about the reason of the order from Adventure Works
+    columns:
+      - name: reason_sk
+        description: Single reason record.
+        tests:
+          - not_null
+          - unique
+
+      - name: name_reason
+        description: product's name description.
+
+      - name: reason_type
+        # description: Month of metric_date.

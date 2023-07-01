@@ -1,7 +1,3 @@
-{{
-    config(materialized='table')
-}}
-
 with customer as (
 	select * 
     from {{ ref('stg_sales_customer') }}
@@ -74,9 +70,7 @@ with customer as (
 		transformed.*
 		, name_territory_description
         , country_region_code
-        , group_geo
         , sales_territory_year
-        , bussiness_cost_in_territory
 		from sales_territory
 		left join transformed
 		on transformed.territory_id =  sales_territory.territory_id
@@ -96,14 +90,35 @@ with customer as (
 		union_customer_country.*
 		, state_province_id
 		, state_province_code
-		, name_province_description
-		, only_state_province_flag
 		, state_province_name
 		from state_province
 		left join union_customer_country
 		on state_province.country_region_code =  union_customer_country.country_region_code 
 )
 
+, change_columns_name as (
+	select
+		customer_id as fixed_person_id
+		, person_id as fixed_customer_id
+		, person_type
+		, full_name
+		, suffix
+		, courtesy_title	
+		, email_promotion
+		, store_id
+		, territory_id 
+		, name_territory_description
+		, country_region_code
+		, sales_territory_year
+		, country_region_name
+		, state_province_id
+		, state_province_code
+		, state_province_name
+	from union_customer_state_province
+	where customer_id is not null
+
+)
+
 select * 
-from union_customer_country
+from change_columns_name
 

@@ -2,7 +2,7 @@ with source_data as (
   select 
     purchaseorderid as purchase_order_id
     , purchaseorderdetailid as purchase_order_detail_id
-    , duedate as due_date
+    , cast(duedate as date) as due_date
     , orderqty as order_qty
     , productid as product_id
     , unitprice as unit_price

@@ -2,9 +2,9 @@ with source_data as (
   select
     salesorderid as sales_order_id
     , customerid as customer_id
-    , orderdate as order_date
-    , duedate as due_date
-    , shipdate as ship_date
+    , cast(cast(orderdate as timestamp) as date) as order_date
+    , cast(cast(duedate as timestamp) as date) as due_date
+    , cast(cast(shipdate as timestamp) as date) as ship_date
     , status
     , onlineorderflag as online_oder_flag
     , purchaseordernumber as purchse_order_number
