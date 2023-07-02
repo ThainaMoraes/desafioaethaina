@@ -57,7 +57,7 @@ sources:
         columns:
           - name: businessentityid
             tests:
-              - not null
+              - not_null
               
           - name: addressid
             tests:

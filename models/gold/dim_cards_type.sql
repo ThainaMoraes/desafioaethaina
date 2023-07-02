@@ -1,6 +1,7 @@
 with int_sales as (
 	select * 
     from {{ ref('int_sales') }}
+    where credit_card_id is not null
 )
 
 , deduplication_data as (
@@ -17,6 +18,6 @@ with int_sales as (
       from deduplication_data
     where dedup_index = 1
 )
-
+ 
 select *
 from credit_card_with_sk 

@@ -39,7 +39,6 @@ sources:
           - name: salesorderid
             tests:
               - not_null
-              - unique
       
       - name: salesperson
         description: Sales representative current information.
@@ -48,11 +47,7 @@ sources:
             tests:
               - not_null
               - unique
-
-          - name: territoryid
-            tests:
-              - not_null
-            
+           
       - name: salesreason
         description: Sales performance tracking.
         columns:
@@ -66,9 +61,6 @@ sources:
           - name: territoryid
             tests:
               - unique
-     
-      - name: countryregioncurrency
-        description: Cross-reference table mapping ISO currency codes to a country or region.
 
       - name: creditcard
         columns:

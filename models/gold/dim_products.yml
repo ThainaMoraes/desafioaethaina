@@ -12,50 +12,41 @@ models:
           - unique
 
       - name: category_name
-        description: product's name description.
+        description: Category name of product.
 
       - name: subcategory_name
-        # description: Month of metric_date.
+        description: Subcategory name of product.
 
       - name: product_name
-        # description: Year of metric_date.
+        description: Name of product.
 
       - name: product_number
-        # description: Quarter of metric_date.
+        description: Number of product.
 
       - name: makeflag
-        # description: Full name of the month of the year.
+        description: 0 = Product is purchased, 1 = Product is manufactured in-house..
         
       - name: finished_goods_flag
-        # description: Full name of the month of the year.
+        description: 0 = Product is not a salable item. 1 = Product is salable..
         
       - name: color
-        # description: Full name of the month of the year.
+        description: Full name of the month of the year.
 
       - name: safety_stock_level
-        # description: Full name of the month of the year.
+        description: Product color.
 
       - name: stand_cost
-        # description: Full name of the month of the year.
+        description: Standard cost of the product.
 
       - name: size_product
-        # description: Full name of the month of the year.
+        description: Product size.
 
       - name: style_product
-        # description: Full name of the month of the year.
+        description: W = Women, M = Men, U = Universal.
 
       - name: weight_product
-        # description: Full name of the month of the year.
-
-      - name: shelf
-        # description: Full name of the month of the year.
-
-      - name: bin
-        # description: Full name of the month of the year.
-
-      - name: quantity_inventory
-        # description: Full name of the month of the year.
+        description: Product weight.
 
       - name: model_name
-        # description: Full name of the month of the year.
+        description: Product model description.
 

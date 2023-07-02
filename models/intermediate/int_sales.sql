@@ -1,9 +1,3 @@
-{{ 
-  config( 
-	 materialized='table'
-  )
-}}
-
 with order_header as (
 	select * 
 	from {{ ref('stg_sales_order_header') }}	
