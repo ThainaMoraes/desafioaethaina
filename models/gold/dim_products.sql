@@ -9,7 +9,6 @@ with int_product as (
         *
         , row_number() over (partition by product_id order by product_id) as dedup_index
     from int_product
- 
 )
 
 , prodcut_with_sk  as (
@@ -30,6 +29,7 @@ with int_product as (
         , model_name
       from deduplication_data
     where dedup_index = 1  
+)
 
 select *
 from prodcut_with_sk 

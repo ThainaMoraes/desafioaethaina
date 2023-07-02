@@ -19,3 +19,9 @@ sources:
         
       - name: shipmethod
         description: Shipping company lookup table.
+        columns:
+          - name: shipmethodid
+            tests:
+              - not_null
+              - unique
+

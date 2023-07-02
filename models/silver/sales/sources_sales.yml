@@ -5,46 +5,75 @@ sources:
     description: Sources from DW with dataset od AdventureWorks
     schema: dev_thaina
     tables:
-      - name: currency
-        description: Lookup table containing standard ISO currencies.
-
-      - name: currencyrate
-        description: Currency exchange rates.
-
       - name: customer
         description: Current customer information. Also see the Person and Store tables.
+        columns:
+          - name: customerid
+            tests:
+              - not_null
+              - unique
+
+          - name: territoryid
+            tests:
+              - not_null
 
       - name: salesorderdetail
         description: Individual products associated with a specific sales order. See SalesOrderHeader.
+        columns:
+          - name: salesorderdetailid
+            tests:
+              - not_null
+              - unique
 
       - name: salesorderheader
         description: General sales order information.
+        columns:
+          - name: salesorderid
+            tests:
+              - not_null
+              - unique
       
       - name: salesorderheadersalesreason 
         description: General sales order information.
-
+        columns:
+          - name: salesorderid
+            tests:
+              - not_null
+              - unique
+      
       - name: salesperson
         description: Sales representative current information.
+        columns:
+          - name: businessentityid
+            tests:
+              - not_null
+              - unique
 
-      - name: salespersonquotahistory
-        description: Sales performance tracking.
-      
+          - name: territoryid
+            tests:
+              - not_null
+            
       - name: salesreason
         description: Sales performance tracking.
-
-      - name: salestaxrate
-        description: Tax rate lookup table.
+        columns:
+          - name: salesreasonid
+            tests:
+              - not_null
 
       - name: salesterritory
         description: Sales territory lookup table.
-
-      - name: salesterritoryhistory
-        description: Sales representative transfers to other sales territories.
-
-      - name: store
-        description: Customers (resellers) of Adventure Works products.
-      
+        columns:
+          - name: territoryid
+            tests:
+              - unique
+     
       - name: countryregioncurrency
         description: Cross-reference table mapping ISO currency codes to a country or region.
 
       - name: creditcard
+        columns:
+          - name: creditcardid
+            tests:
+              - not_null
+              - unique
+
