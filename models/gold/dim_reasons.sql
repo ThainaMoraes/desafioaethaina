@@ -12,8 +12,8 @@ with int_sales as (
 
 , reason_with_sk  as (
     select
-        MD5(cast(sales_reason_id as string)) as sales_reason_fk
-        , sales_order_id
+        MD5(cast(sales_reason_id as string)) as sales_reason_sk
+        , MD5(cast(sales_order_id as string)) as sales_order_fk
         , name_reason
         , reason_type
       from deduplication_data

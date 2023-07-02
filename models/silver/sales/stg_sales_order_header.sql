@@ -6,7 +6,7 @@ with source_data as (
     , cast(cast(duedate as timestamp) as date) as due_date
     , cast(cast(shipdate as timestamp) as date) as ship_date
     , status
-    , onlineorderflag as online_oder_flag
+    , onlineorderflag as online_order_flag
     , purchaseordernumber as purchse_order_number
     , accountnumber as account_number
     , salespersonid as sales_person_id
