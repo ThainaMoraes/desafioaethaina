@@ -51707,3 +51707,472 @@ from worker_with_sk
 [0m20:16:26.380386 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
 [0m20:16:26.381746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b21ef9120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b21e43e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b21e40e50>]}
 [0m20:16:26.382411 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-07-01 20:59:39.942654 | deada6d0-fef2-401b-b0b2-881bafd17a34 ==============================
+[0m20:59:39.942654 [info ] [MainThread]: Running with dbt=1.4.6
+[0m20:59:39.944591 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int', 'sales'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m20:59:39.945181 [debug] [MainThread]: Tracking: tracking
+[0m20:59:39.947385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efcf6182740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efcf61822c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efcf6182710>]}
+[0m20:59:39.986238 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m20:59:40.117582 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:59:40.118427 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/intermediate/int_sales.sql
+[0m20:59:40.140777 [debug] [MainThread]: 1603: static parser failed on intermediate/int_sales.sql
+[0m20:59:40.146778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efcf5f0c760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efcf5f58fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efcf5f58fa0>]}
+[0m20:59:40.147222 [debug] [MainThread]: Flushing usage events
+[0m20:59:40.932796 [error] [MainThread]: Encountered an error:
+Parsing Error
+  at path ['materialized']: Undefined is not of type 'string'
+
+
+============================== 2023-07-01 20:59:57.468556 | 577059a3-62c4-44f3-9284-226a1e12b690 ==============================
+[0m20:59:57.468556 [info ] [MainThread]: Running with dbt=1.4.6
+[0m20:59:57.472735 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int', 'sales'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m20:59:57.473317 [debug] [MainThread]: Tracking: tracking
+[0m20:59:57.475454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34e1b62530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34e1b61390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34e1b623e0>]}
+[0m20:59:57.515185 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m20:59:57.654009 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:59:57.654815 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/intermediate/int_sales.sql
+[0m20:59:57.676833 [debug] [MainThread]: 1603: static parser failed on intermediate/int_sales.sql
+[0m20:59:57.679682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34e16e8340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34e173bb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34e173bbb0>]}
+[0m20:59:57.680076 [debug] [MainThread]: Flushing usage events
+[0m20:59:58.520459 [error] [MainThread]: Encountered an error:
+Compilation Error in model int_sales (models/intermediate/int_sales.sql)
+  expected token ',', got ':'
+    line 3
+      materialized: table
+
+
+============================== 2023-07-01 21:00:14.536293 | e7a7e58a-fc05-48af-825d-f4c80fd8708b ==============================
+[0m21:00:14.536293 [info ] [MainThread]: Running with dbt=1.4.6
+[0m21:00:14.539980 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int', 'sales'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m21:00:14.540421 [debug] [MainThread]: Tracking: tracking
+[0m21:00:14.546034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f426068c7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f426068cee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f426068e530>]}
+[0m21:00:14.592390 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m21:00:14.726746 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:00:14.727686 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/intermediate/int_sales.sql
+[0m21:00:14.750624 [debug] [MainThread]: 1603: static parser failed on intermediate/int_sales.sql
+[0m21:00:14.756679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4260414910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42604650f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4260463e50>]}
+[0m21:00:14.757176 [debug] [MainThread]: Flushing usage events
+[0m21:00:15.922336 [error] [MainThread]: Encountered an error:
+Parsing Error
+  at path ['enabled']: Undefined is not of type 'boolean'
+
+
+============================== 2023-07-01 21:01:31.048687 | d5bcfee1-ba0d-4f0b-b866-aff51832a11e ==============================
+[0m21:01:31.048687 [info ] [MainThread]: Running with dbt=1.4.6
+[0m21:01:31.050913 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int', 'sales'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m21:01:31.051534 [debug] [MainThread]: Tracking: tracking
+[0m21:01:31.053830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ed8647c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ed864ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ed866bc0>]}
+[0m21:01:31.098198 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m21:01:31.285353 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:01:31.287310 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/intermediate/int_sales.sql
+[0m21:01:31.336892 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_sales.sql
+[0m21:01:31.405793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd5bcfee1-ba0d-4f0b-b866-aff51832a11e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ed440250>]}
+[0m21:01:31.431021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd5bcfee1-ba0d-4f0b-b866-aff51832a11e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ed3dfeb0>]}
+[0m21:01:31.431551 [info ] [MainThread]: Found 46 models, 15 tests, 0 snapshots, 0 analyses, 451 macros, 0 operations, 64 seed files, 35 sources, 0 exposures, 0 metrics
+[0m21:01:31.432060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5bcfee1-ba0d-4f0b-b866-aff51832a11e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ed3ac820>]}
+[0m21:01:31.434604 [warn ] [MainThread]: The selection criterion 'int' does not match any nodes
+[0m21:01:31.436730 [warn ] [MainThread]: The selection criterion 'sales' does not match any nodes
+[0m21:01:31.442347 [info ] [MainThread]: 
+[0m21:01:31.443429 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:01:31.444301 [debug] [MainThread]: Command end result
+[0m21:01:31.466778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ed3ac880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ed3dff70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ed3df340>]}
+[0m21:01:31.467575 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-07-01 21:01:55.700163 | 4f2d58a2-58ce-4179-9186-6c078e6dd7c0 ==============================
+[0m21:01:55.700163 [info ] [MainThread]: Running with dbt=1.4.6
+[0m21:01:55.703848 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int', 'sales'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m21:01:55.704455 [debug] [MainThread]: Tracking: tracking
+[0m21:01:55.708993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2ab784880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2ab7865c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2ab7848b0>]}
+[0m21:01:55.747721 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m21:01:55.882937 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m21:01:55.884654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4f2d58a2-58ce-4179-9186-6c078e6dd7c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2ab79d5a0>]}
+[0m21:01:57.410187 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_sales.sql
+[0m21:01:57.431783 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_product.sql
+[0m21:01:57.436994 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_reason.sql
+[0m21:01:57.444463 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_address.sql
+[0m21:01:57.453307 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_person.sql
+[0m21:01:57.468282 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_workers.sql
+[0m21:01:57.473875 [debug] [MainThread]: 1699: static parser successfully parsed gold/fact_sales.sql
+[0m21:01:57.480208 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_address.sql
+[0m21:01:57.488678 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_products.sql
+[0m21:01:57.499148 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_cards_type.sql
+[0m21:01:57.506142 [debug] [MainThread]: 1603: static parser failed on gold/dim_dates.sql
+[0m21:01:57.544212 [debug] [MainThread]: 1602: parser fallback to jinja rendering on gold/dim_dates.sql
+[0m21:01:57.546885 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_reasons.sql
+[0m21:01:57.551673 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_customers.sql
+[0m21:01:57.556381 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_description.sql
+[0m21:01:57.561022 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_location.sql
+[0m21:01:57.566363 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_inventory.sql
+[0m21:01:57.571510 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_subcategory.sql
+[0m21:01:57.577128 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_category.sql
+[0m21:01:57.583279 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product.sql
+[0m21:01:57.588055 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_model.sql
+[0m21:01:57.592772 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchase_order_detail.sql
+[0m21:01:57.597463 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchasing_ship_method.sql
+[0m21:01:57.602711 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchasing_product_vendor.sql
+[0m21:01:57.607582 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchase_order_header.sql
+[0m21:01:57.612176 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchasing_vendor.sql
+[0m21:01:57.618197 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_detail.sql
+[0m21:01:57.624227 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_currency.sql
+[0m21:01:57.632032 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_territory.sql
+[0m21:01:57.646274 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_currency_rate.sql
+[0m21:01:57.655517 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_reason.sql
+[0m21:01:57.664796 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_customer.sql
+[0m21:01:57.672168 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_country_region_currency.sql
+[0m21:01:57.678784 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_person.sql
+[0m21:01:57.685026 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_tax_rate.sql
+[0m21:01:57.692993 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_person_quota_history.sql
+[0m21:01:57.701069 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header_reason.sql
+[0m21:01:57.706282 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_creditcard.sql
+[0m21:01:57.713999 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header.sql
+[0m21:01:57.721559 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_address_type.sql
+[0m21:01:57.728465 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_state_province.sql
+[0m21:01:57.735310 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_person.sql
+[0m21:01:57.742627 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_address.sql
+[0m21:01:57.751762 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_contact_type.sql
+[0m21:01:57.757849 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_business_entity_address.sql
+[0m21:01:57.765497 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_country_region.sql
+[0m21:01:57.772040 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_business_entity_contact.sql
+[0m21:01:58.237198 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_customer' in the 'models' section of file 'models/gold/dim_customers.yml'
+[0m21:01:58.301426 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_reason' in the 'models' section of file 'models/gold/dim_reasons.yml'
+[0m21:01:58.362691 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_customer' in the 'models' section of file 'models/gold/dim_cards_type.yml'
+[0m21:01:58.639492 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.not_null_dim_customer_customer_sk.69b9dd095b' (models/gold/dim_customers.yml) depends on a node named 'dim_customer' in package '' which was not found
+[0m21:01:58.640878 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.unique_dim_customer_customer_sk.c225f6f263' (models/gold/dim_customers.yml) depends on a node named 'dim_customer' in package '' which was not found
+[0m21:01:58.642182 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.not_null_dim_reason_reason_sk.3df7e0353d' (models/gold/dim_reasons.yml) depends on a node named 'dim_reason' in package '' which was not found
+[0m21:01:58.643676 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.unique_dim_reason_reason_sk.359f0eaaf1' (models/gold/dim_reasons.yml) depends on a node named 'dim_reason' in package '' which was not found
+[0m21:01:58.645245 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.relationships_fact_sales_customer_fk__customer_sk__ref_dim_costumers_.f487da3b64' (models/gold/fact_sales.yml) depends on a node named 'dim_costumers' in package '' which was not found
+[0m21:01:58.878833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4f2d58a2-58ce-4179-9186-6c078e6dd7c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2ab6b8610>]}
+[0m21:01:58.916729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4f2d58a2-58ce-4179-9186-6c078e6dd7c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2ab6b8790>]}
+[0m21:01:58.917496 [info ] [MainThread]: Found 46 models, 15 tests, 0 snapshots, 0 analyses, 451 macros, 0 operations, 64 seed files, 35 sources, 0 exposures, 0 metrics
+[0m21:01:58.918294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4f2d58a2-58ce-4179-9186-6c078e6dd7c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2ab4f11e0>]}
+[0m21:01:58.920593 [warn ] [MainThread]: The selection criterion 'int' does not match any nodes
+[0m21:01:58.922687 [warn ] [MainThread]: The selection criterion 'sales' does not match any nodes
+[0m21:01:58.926968 [info ] [MainThread]: 
+[0m21:01:58.927837 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:01:58.928472 [debug] [MainThread]: Command end result
+[0m21:01:58.954518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2abbb6a40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2ab6b8df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2ab6baa10>]}
+[0m21:01:58.955216 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-07-01 21:02:05.057068 | 54ec07d5-4979-42e3-924c-cdacda076b0a ==============================
+[0m21:02:05.057068 [info ] [MainThread]: Running with dbt=1.4.6
+[0m21:02:05.059310 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int', 'sales'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m21:02:05.059919 [debug] [MainThread]: Tracking: tracking
+[0m21:02:05.062161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41695865f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4169584880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41695865c0>]}
+[0m21:02:05.101928 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m21:02:05.237524 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:02:05.238845 [debug] [MainThread]: Partial parsing: updated file: desafioaethaina://models/intermediate/int_sales.sql
+[0m21:02:05.261666 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_sales.sql
+[0m21:02:05.299644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '54ec07d5-4979-42e3-924c-cdacda076b0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41693531c0>]}
+[0m21:02:05.323183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '54ec07d5-4979-42e3-924c-cdacda076b0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41692fbf70>]}
+[0m21:02:05.323759 [info ] [MainThread]: Found 46 models, 15 tests, 0 snapshots, 0 analyses, 451 macros, 0 operations, 64 seed files, 35 sources, 0 exposures, 0 metrics
+[0m21:02:05.324366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54ec07d5-4979-42e3-924c-cdacda076b0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41692c4070>]}
+[0m21:02:05.326007 [warn ] [MainThread]: The selection criterion 'int' does not match any nodes
+[0m21:02:05.327404 [warn ] [MainThread]: The selection criterion 'sales' does not match any nodes
+[0m21:02:05.330648 [info ] [MainThread]: 
+[0m21:02:05.331592 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:02:05.332335 [debug] [MainThread]: Command end result
+[0m21:02:05.354935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41692c40d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41692fbf40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41692fb280>]}
+[0m21:02:05.356346 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-07-01 21:02:23.634193 | 02a99182-3f36-4900-bf19-eba72214c35a ==============================
+[0m21:02:23.634193 [info ] [MainThread]: Running with dbt=1.4.6
+[0m21:02:23.636278 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int_', 'sales'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m21:02:23.636763 [debug] [MainThread]: Tracking: tracking
+[0m21:02:23.638864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1e786440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1e786530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1e7863b0>]}
+[0m21:02:23.677182 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m21:02:23.752327 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m21:02:23.753038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '02a99182-3f36-4900-bf19-eba72214c35a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1e79fbb0>]}
+[0m21:02:24.923112 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_sales.sql
+[0m21:02:24.938767 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_product.sql
+[0m21:02:24.943657 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_reason.sql
+[0m21:02:24.948562 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_address.sql
+[0m21:02:24.953543 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_person.sql
+[0m21:02:24.958300 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_workers.sql
+[0m21:02:24.962918 [debug] [MainThread]: 1699: static parser successfully parsed gold/fact_sales.sql
+[0m21:02:24.967400 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_address.sql
+[0m21:02:24.972362 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_products.sql
+[0m21:02:24.976952 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_cards_type.sql
+[0m21:02:24.981573 [debug] [MainThread]: 1603: static parser failed on gold/dim_dates.sql
+[0m21:02:25.018289 [debug] [MainThread]: 1602: parser fallback to jinja rendering on gold/dim_dates.sql
+[0m21:02:25.020991 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_reasons.sql
+[0m21:02:25.025800 [debug] [MainThread]: 1699: static parser successfully parsed gold/dim_customers.sql
+[0m21:02:25.030505 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_description.sql
+[0m21:02:25.035068 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_location.sql
+[0m21:02:25.039926 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_inventory.sql
+[0m21:02:25.044473 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_subcategory.sql
+[0m21:02:25.049502 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_category.sql
+[0m21:02:25.055664 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product.sql
+[0m21:02:25.060419 [debug] [MainThread]: 1699: static parser successfully parsed silver/products/stg_product_model.sql
+[0m21:02:25.065087 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchase_order_detail.sql
+[0m21:02:25.069612 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchasing_ship_method.sql
+[0m21:02:25.074467 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchasing_product_vendor.sql
+[0m21:02:25.078978 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchase_order_header.sql
+[0m21:02:25.083528 [debug] [MainThread]: 1699: static parser successfully parsed silver/purchasing/stg_purchasing_vendor.sql
+[0m21:02:25.088432 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_detail.sql
+[0m21:02:25.093148 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_currency.sql
+[0m21:02:25.098210 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_territory.sql
+[0m21:02:25.103262 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_currency_rate.sql
+[0m21:02:25.107960 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_reason.sql
+[0m21:02:25.114442 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_customer.sql
+[0m21:02:25.119161 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_country_region_currency.sql
+[0m21:02:25.124066 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_person.sql
+[0m21:02:25.128756 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_tax_rate.sql
+[0m21:02:25.133440 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_person_quota_history.sql
+[0m21:02:25.138328 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header_reason.sql
+[0m21:02:25.142980 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_creditcard.sql
+[0m21:02:25.147586 [debug] [MainThread]: 1699: static parser successfully parsed silver/sales/stg_sales_order_header.sql
+[0m21:02:25.153263 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_address_type.sql
+[0m21:02:25.158402 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_state_province.sql
+[0m21:02:25.163019 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_person.sql
+[0m21:02:25.167719 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_address.sql
+[0m21:02:25.172858 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_contact_type.sql
+[0m21:02:25.177881 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_business_entity_address.sql
+[0m21:02:25.182568 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_country_region.sql
+[0m21:02:25.187150 [debug] [MainThread]: 1699: static parser successfully parsed silver/person/stg_person_business_entity_contact.sql
+[0m21:02:25.531952 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_customer' in the 'models' section of file 'models/gold/dim_customers.yml'
+[0m21:02:25.594181 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_reason' in the 'models' section of file 'models/gold/dim_reasons.yml'
+[0m21:02:25.633198 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_customer' in the 'models' section of file 'models/gold/dim_cards_type.yml'
+[0m21:02:25.799015 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.not_null_dim_customer_customer_sk.69b9dd095b' (models/gold/dim_customers.yml) depends on a node named 'dim_customer' in package '' which was not found
+[0m21:02:25.799976 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.unique_dim_customer_customer_sk.c225f6f263' (models/gold/dim_customers.yml) depends on a node named 'dim_customer' in package '' which was not found
+[0m21:02:25.800929 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.not_null_dim_reason_reason_sk.3df7e0353d' (models/gold/dim_reasons.yml) depends on a node named 'dim_reason' in package '' which was not found
+[0m21:02:25.801794 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.unique_dim_reason_reason_sk.359f0eaaf1' (models/gold/dim_reasons.yml) depends on a node named 'dim_reason' in package '' which was not found
+[0m21:02:25.802664 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.desafioaethaina.relationships_fact_sales_customer_fk__customer_sk__ref_dim_costumers_.f487da3b64' (models/gold/fact_sales.yml) depends on a node named 'dim_costumers' in package '' which was not found
+[0m21:02:25.932202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '02a99182-3f36-4900-bf19-eba72214c35a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1e6a0700>]}
+[0m21:02:25.956633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '02a99182-3f36-4900-bf19-eba72214c35a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1e6a0700>]}
+[0m21:02:25.957182 [info ] [MainThread]: Found 46 models, 15 tests, 0 snapshots, 0 analyses, 451 macros, 0 operations, 64 seed files, 35 sources, 0 exposures, 0 metrics
+[0m21:02:25.957680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '02a99182-3f36-4900-bf19-eba72214c35a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1dd9aaa0>]}
+[0m21:02:25.960330 [warn ] [MainThread]: The selection criterion 'int_' does not match any nodes
+[0m21:02:25.962617 [warn ] [MainThread]: The selection criterion 'sales' does not match any nodes
+[0m21:02:25.968122 [info ] [MainThread]: 
+[0m21:02:25.969390 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:02:25.970465 [debug] [MainThread]: Command end result
+[0m21:02:25.992945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1ecd3010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1e6a0a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e1e6a0250>]}
+[0m21:02:25.994231 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-07-01 21:02:33.104810 | 496bdb4f-25ed-4e38-838a-6430882287f9 ==============================
+[0m21:02:33.104810 [info ] [MainThread]: Running with dbt=1.4.6
+[0m21:02:33.106961 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/thaina/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['int_sales'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m21:02:33.107412 [debug] [MainThread]: Tracking: tracking
+[0m21:02:33.109745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b6754e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b677c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b675510>]}
+[0m21:02:33.153279 [debug] [MainThread]: checksum: 0325e47f1211ebbdb24627f81d8289d705fdb573380364d07ab35982cb3d57cd, vars: {}, profile: None, target: None, version: 1.4.6
+[0m21:02:33.331564 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:02:33.332166 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:02:33.347080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '496bdb4f-25ed-4e38-838a-6430882287f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b239f30>]}
+[0m21:02:33.383590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '496bdb4f-25ed-4e38-838a-6430882287f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b1fb310>]}
+[0m21:02:33.384217 [info ] [MainThread]: Found 46 models, 15 tests, 0 snapshots, 0 analyses, 451 macros, 0 operations, 64 seed files, 35 sources, 0 exposures, 0 metrics
+[0m21:02:33.384765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '496bdb4f-25ed-4e38-838a-6430882287f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b1fb730>]}
+[0m21:02:33.389230 [info ] [MainThread]: 
+[0m21:02:33.391650 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:02:33.392913 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafiothaina'
+[0m21:02:33.393373 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:02:34.678458 [debug] [ThreadPool]: Acquiring new bigquery connection 'create_desafiothaina_dev_thaina_intermediate'
+[0m21:02:34.679268 [debug] [ThreadPool]: Acquiring new bigquery connection 'create_desafiothaina_dev_thaina_intermediate'
+[0m21:02:34.679678 [debug] [ThreadPool]: Creating schema "ReferenceKeyMsg(database='desafiothaina', schema='dev_thaina_intermediate', identifier=None)"
+[0m21:02:34.691197 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:02:34.693269 [debug] [ThreadPool]: On create_desafiothaina_dev_thaina_intermediate: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "connection_name": "create_desafiothaina_dev_thaina_intermediate"} */
+create schema if not exists `desafiothaina`.`dev_thaina_intermediate`
+  
+[0m21:02:36.725651 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafiothaina&j=bq:US:cab2be39-369a-45f5-beaa-6f3252c274a3&page=queryresults
+[0m21:02:36.732213 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafiothaina_dev_thaina_gold'
+[0m21:02:36.732700 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:02:36.733753 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafiothaina_dev_thaina_intermediate'
+[0m21:02:36.736161 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:02:36.767619 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_desafiothaina_dev_thaina'
+[0m21:02:36.769771 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:02:37.842199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '496bdb4f-25ed-4e38-838a-6430882287f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b1fb070>]}
+[0m21:02:37.843156 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:02:37.843624 [info ] [MainThread]: 
+[0m21:02:37.848066 [debug] [Thread-1 (]: Began running node model.desafioaethaina.int_sales
+[0m21:02:37.848672 [info ] [Thread-1 (]: 1 of 1 START sql table model dev_thaina_intermediate.int_sales ................. [RUN]
+[0m21:02:37.849907 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.desafioaethaina.int_sales'
+[0m21:02:37.850372 [debug] [Thread-1 (]: Began compiling node model.desafioaethaina.int_sales
+[0m21:02:37.877853 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.int_sales"
+[0m21:02:37.882685 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.int_sales"
+[0m21:02:37.887982 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.int_sales"
+[0m21:02:37.892617 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.int_sales"
+[0m21:02:37.897154 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.int_sales"
+[0m21:02:37.907706 [debug] [Thread-1 (]: Writing injected SQL for node "model.desafioaethaina.int_sales"
+[0m21:02:37.909026 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.int_sales (compile): 2023-07-01 21:02:37.850643 => 2023-07-01 21:02:37.908825
+[0m21:02:37.909486 [debug] [Thread-1 (]: Began executing node model.desafioaethaina.int_sales
+[0m21:02:37.949953 [debug] [Thread-1 (]: Writing runtime sql for node "model.desafioaethaina.int_sales"
+[0m21:02:37.950669 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:02:37.952448 [debug] [Thread-1 (]: On model.desafioaethaina.int_sales: /* {"app": "dbt", "dbt_version": "1.4.6", "profile_name": "desafioaethaina", "target_name": "dev", "node_id": "model.desafioaethaina.int_sales"} */
+
+  
+    
+
+    create or replace table `desafiothaina`.`dev_thaina_intermediate`.`int_sales`
+    
+    
+    OPTIONS(
+      description=""""""
+    )
+    as (
+      
+
+with  __dbt__cte__stg_sales_order_header as (
+with source_data as (
+  select
+    salesorderid as sales_order_id
+    , customerid as customer_id
+    , cast(cast(orderdate as timestamp) as date) as order_date
+    , cast(cast(duedate as timestamp) as date) as due_date
+    , cast(cast(shipdate as timestamp) as date) as ship_date
+    , status
+    , onlineorderflag as online_oder_flag
+    , purchaseordernumber as purchse_order_number
+    , accountnumber as account_number
+    , salespersonid as sales_person_id
+    , territoryid as territory_id
+    , billtoaddressid as bill_to_address_id
+    , shiptoaddressid as ship_to_address_id
+    , shipmethodid as ship_method_id
+    , creditcardid as credit_card_id
+    , creditcardapprovalcode as credit_card_approval_code 
+    , currencyrateid as currency_rate_id
+    , subtotal as sub_total
+    , taxamt as tax_amount
+    , freight
+    /*Total due from customer. Computed as Subtotal + TaxAmt + Freight.
+      Computed: isnull(([SubTotal]+[TaxAmt])+[Freight],(0)) */
+    , totaldue as total_due
+    , rowguid
+  from
+    `desafiothaina`.`dev_thaina`.`salesorderheader`
+)
+
+select * 
+  from source_data
+),  __dbt__cte__stg_sales_order_header_reason as (
+with source_data as (
+  select
+    salesorderid as sales_order_id
+    , salesreasonid as sales_reason_id
+  from
+    `desafiothaina`.`dev_thaina`.`salesorderheadersalesreason`
+)
+select  *
+from  source_data
+),  __dbt__cte__stg_sales_order_detail as (
+with source_data as (
+  select 
+    salesorderid as sales_order_id
+    , salesorderdetailid as sales_order_detail_id
+    -- Shipment tracking number supplied by the shipper.
+    , carriertrackingnumber as carrier_tracking_number
+    , orderqty as order_qty
+    , productid as product_id
+    -- Promotional code. Foreign key to SpecialOffer.SpecialOfferID.
+    -- , specialofferid as special_offer_id
+    , unitprice as unit_price
+    , unitpricediscount as unit_price_discount
+    /* Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.
+      Computed: isnull(([UnitPrice]*((1.0)-[UnitPriceDiscount]))*[OrderQty],(0.0))* era o linetotal*/ 
+    , rowguid
+  from  `desafiothaina`.`dev_thaina`.`salesorderdetail`
+)
+
+select *
+from source_data
+),  __dbt__cte__stg_sales_creditcard as (
+with source_data as (
+  select 
+    creditcardid as credit_card_id
+    , cardtype as card_type
+  from  `desafiothaina`.`dev_thaina`.`creditcard`
+)
+select *
+from source_data
+),  __dbt__cte__stg_purchasing_ship_method as (
+with source_data as (
+  select 
+    shipmethodid as ship_method_id
+    , name as shipping_company_name
+    , shipbase as ship_base
+    , shiprate as ship_rate
+    , rowguid
+  from  `desafiothaina`.`dev_thaina`.`shipmethod`
+)
+
+select *
+from source_data
+),order_header as (
+	select * 
+	from __dbt__cte__stg_sales_order_header	
+)
+
+, order_header_reason as (
+	select * 
+	from __dbt__cte__stg_sales_order_header_reason	
+)
+
+, order_detail as (
+	select * 
+	from __dbt__cte__stg_sales_order_detail	
+)
+
+, credit_card as (
+	select * 
+	from __dbt__cte__stg_sales_creditcard	
+)
+
+, ship_method as (
+	select * 
+	from __dbt__cte__stg_purchasing_ship_method
+)
+
+, union_header_reason as (
+	select 
+		order_header.*
+		, card_type
+	from order_header 
+	left join credit_card
+		on credit_card.credit_card_id = order_header.credit_card_id
+)
+
+, union_header_detail as (
+	select 
+		union_header_reason.*
+		, shipping_company_name
+		, sales_order_detail_id
+		, carrier_tracking_number
+		, product_id
+		, order_qty
+		, unit_price
+		, unit_price_discount
+	from order_detail 
+	left join union_header_reason
+		on union_header_reason.sales_order_id =  order_detail.sales_order_id
+	left join ship_method
+		on ship_method.ship_method_id = union_header_reason.ship_method_id
+)
+
+select * 
+from union_header_detail
+    );
+  
+[0m21:02:44.913385 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=desafiothaina&j=bq:US:28c297ac-ffdf-4e5a-8304-08c653ee598b&page=queryresults
+[0m21:02:44.937885 [debug] [Thread-1 (]: Timing info for model.desafioaethaina.int_sales (execute): 2023-07-01 21:02:37.909751 => 2023-07-01 21:02:44.937804
+[0m21:02:44.938861 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '496bdb4f-25ed-4e38-838a-6430882287f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b0e3ca0>]}
+[0m21:02:44.939719 [info ] [Thread-1 (]: 1 of 1 OK created sql table model dev_thaina_intermediate.int_sales ............ [[32mCREATE TABLE (121.3k rows, 14.1 MB processed)[0m in 7.09s]
+[0m21:02:44.944163 [debug] [Thread-1 (]: Finished running node model.desafioaethaina.int_sales
+[0m21:02:44.946809 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:02:44.947634 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:02:44.947913 [debug] [MainThread]: Connection 'list_desafiothaina_dev_thaina_gold' was properly closed.
+[0m21:02:44.948171 [debug] [MainThread]: Connection 'model.desafioaethaina.int_sales' was properly closed.
+[0m21:02:44.948433 [debug] [MainThread]: Connection 'list_desafiothaina_dev_thaina' was properly closed.
+[0m21:02:44.948736 [info ] [MainThread]: 
+[0m21:02:44.949248 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 11.56 seconds (11.56s).
+[0m21:02:44.950050 [debug] [MainThread]: Command end result
+[0m21:02:44.980397 [info ] [MainThread]: 
+[0m21:02:44.981461 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:02:44.982188 [info ] [MainThread]: 
+[0m21:02:44.984176 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m21:02:44.985911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b1093f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b147370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48b147310>]}
+[0m21:02:44.987269 [debug] [MainThread]: Flushing usage events
