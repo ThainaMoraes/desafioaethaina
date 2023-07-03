@@ -11,12 +11,6 @@ models:
           - not_null
           - unique
 
-      - name: sales_order_fk
-        description: Unique identifier for each order the fact table.
-        tests:
-          - not_null
-          - unique
-
       - name: customer_fk
         description: Customer identifier.
         tests:
@@ -45,10 +39,7 @@ models:
               to: ref('dim_dates')
               field: metric_date
 
-      - name: status
-        description: Status of sale.
-
-      - name: online_order_flag
+      - name: online_order
         description: If the sale was online or not.
 
       - name: sales_person_fk
@@ -86,14 +77,33 @@ models:
               to: ref('dim_cards_type')
               field: credit_card_sk      
 
-      - name: sub_total
-        description: Subtotal of sale.
+      - name: carrier_tracking_number
+        description: Shipment tracking number supplied by the shipper.   
 
-      - name: tax_amount
-        description: Tax amount of sale.
+      - name: paid_with_credit_card
+        description: If the sale was paied with a credit card.   
 
-      - name: freight
-        description: Freight of sale.
+      - name: Status
+        description: Order current status. 1 = Pending; 2 = Approved; 3 = Rejected; 4 =Complete
 
-      - name: total_due
-        description: Total due of sale.
+      - name: order_qty
+        description: Quantity for each product.   
+
+      - name: unit_price
+        description: Unit price of product.   
+
+      - name: unit_price_discount
+        description: Discount for unit price.   
+
+      - name: sub_total_fixed
+        description: Subtotal proportional of order_detail_id.
+
+      - name: tax_amount_fixed
+        description: Tax amount proportional of order_detail_id.
+
+      - name: freight_fixed
+        description: Freight proportional of order_detail_id.
+
+      - name: total_due_fixed
+        description: Total due proportional of order_detail_id.
+
