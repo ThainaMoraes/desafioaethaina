@@ -18,36 +18,12 @@ models:
               to: ref('dim_customers')
               field: customer_sk
 
-      - name: order_date
-        description: Date of sale.
+      - name: sales_person_fk
+        description: Sales person foreign key.
         tests:
           - relationships:
-              to: ref('dim_dates')
-              field: metric_date
-
-      - name: due_date
-        description: Date of due.
-        tests:
-          - relationships:
-              to: ref('dim_dates')
-              field: metric_date
-
-      - name: ship_date
-        description: Date of ship.
-        tests:
-          - relationships:
-              to: ref('dim_dates')
-              field: metric_date
-
-      - name: online_order
-        description: If the sale was online or not.
-
-      # - name: sales_person_fk
-      #   description: Sales person foreign key.
-      #   tests:
-      #     - relationships:
-      #         to: ref('dim_workers')
-      #         field: worker_sk 
+              to: ref('dim_workers')
+              field: worker_sk 
 
       - name: territory_fk
         description: Territory foreign key.
@@ -90,6 +66,30 @@ models:
           - relationships:
               to: ref('dim_reasons')
               field: reason_type_sk      
+
+      - name: order_date
+        description: Date of sale.
+        tests:
+          - relationships:
+              to: ref('dim_dates')
+              field: metric_date
+
+      - name: due_date
+        description: Date of due.
+        tests:
+          - relationships:
+              to: ref('dim_dates')
+              field: metric_date
+
+      - name: ship_date
+        description: Date of ship.
+        tests:
+          - relationships:
+              to: ref('dim_dates')
+              field: metric_date
+
+      - name: online_order
+        description: If the sale was online or not.
 
       - name: carrier_tracking_number
         description: Shipment tracking number supplied by the shipper.   

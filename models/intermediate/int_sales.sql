@@ -18,11 +18,6 @@ with order_header as (
 	from {{ ref('stg_sales_creditcard') }}	
 )
 
-, ship_method as (
-	select * 
-	from {{ ref('stg_purchasing_ship_method') }}
-)
-
 , reason as (
 	select *
 	from {{ ref('int_reason') }}
@@ -40,7 +35,6 @@ with order_header as (
 , union_header_detail as (
 	select 
 		union_credit_card.*
-		, shipping_company_name
 		, sales_order_detail_id
 		, carrier_tracking_number
 		, product_id
@@ -55,8 +49,6 @@ with order_header as (
 	from order_detail 
 	left join union_credit_card
 		on union_credit_card.sales_order_id =  order_detail.sales_order_id
-	left join ship_method
-		on ship_method.ship_method_id = union_credit_card.ship_method_id
 )
 
 , count_orders as (

@@ -14,7 +14,7 @@ with customer as (
 		, person.*
 	from person
 	left join customer
-	on person.business_entity_id = customer.customer_id 
+	on person.business_entity_id = customer.person_id 
 )
 
 , transformed as (
