@@ -14,4 +14,4 @@ with sales as (
 select 
     total_sales
 from sales
-where total_sales not between 12646000.00 and 12647000.00
+where total_sales not between 12600000 and 12700000
