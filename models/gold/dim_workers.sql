@@ -1,7 +1,7 @@
 with int_person as (
     select * 
     from {{ ref('int_person') }}
-    where person_type != 'Individual Customer'
+    where person_id is not null
 )
 
 , deduplication_data as (
@@ -21,12 +21,6 @@ with int_person as (
         , suffix
         , store_id
         , email_promotion
-        -- , name_territory_description
-        -- , country_region_code
-        -- , country_region_name
-        -- , state_province_id
-        -- , state_province_code
-        -- , state_province_name
     from deduplication_data
     where dedup_index = 1
 )

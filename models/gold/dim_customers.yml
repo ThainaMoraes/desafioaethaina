@@ -27,25 +27,3 @@ models:
 
       - name: email_promotion 
         description: If customers wants to receive an email promotion. 0 = don't / 1 = wants / 2 = wants from partners too
-
-      - name: name_territory_description
-        description: Territory description.
-
-      - name: country_region_code
-        description: Code of country region.
-        tests:
-          - not_null
-
-      - name: country_region_name
-        description: Name of country region.
-
-      - name: state_province_id
-        description: Id of state province.
-        tests:
-          - not_null
-
-      - name: state_province_code
-        description: Code of state province.
-
-      - name: state_province_name
-        description: Name of state province

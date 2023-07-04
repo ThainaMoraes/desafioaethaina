@@ -22,6 +22,12 @@ with int_address as (
         , address
         , city
         , state_province_id
+        , state_province_code
+        , country_region_code
+        , name_province_description
+        , state_province_name
+        , territory_id
+        , name_territory_description
       from deduplication_data
     where dedup_index = 1
 )

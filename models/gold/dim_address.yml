@@ -42,25 +42,31 @@ models:
         description: Name of the city.
 
       - name: state_province_id
-        description: ID of state province
+        description: Id of state province
 
       - name: address_type_name
-        description: 
+        description: Address type description.
 
-      - name: 
-        description: 
+      - name: worker_id
+        description: Id of worker
 
-      - name: 
-        description: 
+      - name: contact_type_name_worker
+        description: Type of contact of worker
 
-      - name: 
-        description: 
+      - name: state_province_code
+        description: ISO standard state or province code.
 
-      - name: 
-        description: 
+      - name: country_region_code
+        description: ISO standard country or region code.
 
-      - name: 
-        description: 
+      - name: name_province_description
+        description: State or province description.
 
-      - name: 
-        description: 
+      - name: state_province_name
+        description: State or province description
+
+      - name: territory_id
+        description: ID of the territory in which the state or province is located.
+
+      - name: name_territory_description
+        description: Name of the territory in which the state or province is located.

@@ -42,12 +42,19 @@ models:
       - name: online_order
         description: If the sale was online or not.
 
-      - name: sales_person_fk
-        description: Sales person foreign key.
+      # - name: sales_person_fk
+      #   description: Sales person foreign key.
+      #   tests:
+      #     - relationships:
+      #         to: ref('dim_workers')
+      #         field: worker_sk 
+
+      - name: territory_fk
+        description: Territory foreign key.
         tests:
           - relationships:
-              to: ref('dim_workers')
-              field: worker_sk 
+              to: ref('dim_territories')
+              field: territory_sk
 
       - name: bill_to_address_fk
         description: Bill to address foreign key.

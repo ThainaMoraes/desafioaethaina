@@ -19,6 +19,7 @@ with int_sales as (
         , ship_date
         , online_order
         , MD5(cast(sales_person_id as string)) as sales_person_fk
+        , MD5(cast(territory_id as string)) as territory_fk
         , MD5(cast(bill_to_address_id as string)) as bill_to_address_fk
         , MD5(cast(ship_to_address_id as string)) as ship_to_address_fk
         , MD5(cast(ship_method_id as string)) as ship_method_fk
