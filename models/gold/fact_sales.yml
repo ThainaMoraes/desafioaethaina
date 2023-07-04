@@ -18,13 +18,6 @@ models:
               to: ref('dim_customers')
               field: customer_sk
 
-      - name: sales_person_fk
-        description: Sales person foreign key.
-        tests:
-          - relationships:
-              to: ref('dim_workers')
-              field: worker_sk 
-
       - name: territory_fk
         description: Territory foreign key.
         tests:

@@ -42,11 +42,11 @@ models:
       +schema: gold
 
     intermediate:
-      +materialized: table
+      +materialized: ephemeral
       +schema: intermediate
       
     silver:
-      +materialized: view
+      +materialized: ephemeral
       +schema: silver
     
 

@@ -30,9 +30,14 @@ with order_header_reason as (
 , replace_aggregate as (
 	select 
 		sales_order_id
-		, REPLACE(agg_reason_type,'Other, Other', 'Other') as reason_type
-		, REPLACE(agg_name_reason,'Other, Other', 'Other') as name_reason
+		, replace(replace(agg_reason_type,'Other, Other', 'Other'), 'Promotion, Other', 'Other, Promotion') as reason_type
+		, replace(agg_name_reason,'Other, Other', 'Other') as name_reason
 	from aggregate_columns
+	union all
+	select
+		null as sales_order_id
+		, null as reason_type
+		, null as name_reason
 )
 select *
 from replace_aggregate

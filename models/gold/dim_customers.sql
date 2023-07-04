@@ -13,7 +13,7 @@ with int_person as (
 
 , customer_with_sk  as (
     select
-        MD5(cast(customer_id as string)) as customer_sk
+        {{ dbt_utils.generate_surrogate_key(['customer_id']) }} as customer_sk
         , full_name 
 		, territory_id 
         , person_type

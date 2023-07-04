@@ -12,7 +12,7 @@ with int_address as (
 
 , territory_with_sk  as (
     select
-        MD5(cast(territory_id as string)) territory_sk
+        {{ dbt_utils.generate_surrogate_key(['territory_id']) }} as territory_sk
         , name_territory_description
       from deduplication_data
     where dedup_index = 1

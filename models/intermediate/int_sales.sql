@@ -88,7 +88,7 @@ with order_header as (
 		, bill_to_address_id
 		, ship_to_address_id
 		, ship_method_id
-		, credit_card_id
+		-- , credit_card_id
 		, case 
 			when credit_card_approval_code is not null
 				then "No"
