@@ -2,8 +2,8 @@
 with date_series as (
            {{ dbt_utils.date_spine(
                 datepart="day",
-                start_date= "cast('2011-05-01' as date)", 
-                end_date="cast('2014-07-31' as date)"
+                start_date= "cast('2011-01-01' as date)", 
+                end_date="cast('2014-12-31' as date)"
            )
            }}
     )

@@ -80,8 +80,8 @@ with order_header as (
 		, ship_date
 		, case 
 			when purchase_order_number is not null
-				then "No"
-			else "Yes"
+				then "Não"
+			else "Sim"
 		end as online_order
 		, sales_person_id
 		, territory_id
@@ -91,8 +91,8 @@ with order_header as (
 		-- , credit_card_id
 		, case 
 			when credit_card_approval_code is not null
-				then "No"
-			else "Yes"
+				then "Não"
+			else "Sim"
 		end as paid_with_credit_card
 		, card_type
 		, status

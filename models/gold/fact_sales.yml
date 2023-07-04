@@ -11,6 +11,11 @@ models:
           - not_null
           - unique
 
+      - name: sales_order_fk
+        description: Unique identifier for each sales order on the fact table.
+        tests:
+          - not_null
+
       - name: customer_fk
         description: Customer identifier.
         tests:

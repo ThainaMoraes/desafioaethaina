@@ -13,7 +13,7 @@ with int_sales as (
 , reason_with_sk  as (
     select
         {{ dbt_utils.generate_surrogate_key(['reason_type']) }} as reason_type_sk
-        , reason_type
+        , ifnull(reason_type,"Não definido") as reason_type
       from deduplication_data
     where dedup_index = 1
 )
