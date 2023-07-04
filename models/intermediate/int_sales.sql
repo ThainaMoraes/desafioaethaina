@@ -24,10 +24,7 @@ with order_header as (
 )
 
 , reason as (
-	select 
-		DISTINCT  
-		sales_order_id
-		, reason_type 
+	select *
 	from {{ ref('int_reason') }}
 )
 
@@ -39,7 +36,6 @@ with order_header as (
 	left join credit_card
 		on credit_card.credit_card_id = order_header.credit_card_id
 )
-
 
 , union_header_detail as (
 	select 

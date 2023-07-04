@@ -24,6 +24,7 @@ with int_sales as (
         , MD5(cast(ship_method_id as string)) as ship_method_fk
         , MD5(cast(product_id as string)) as product_fk
         , MD5(cast(credit_card_id as string)) as credit_card_fk
+        , MD5(cast(reason_type as string)) as reason_type_fk
         , carrier_tracking_number
         , paid_with_credit_card
         , status
@@ -33,7 +34,7 @@ with int_sales as (
         , sub_total_fixed
 		, freight_fixed
 		, tax_fixed
-        total_due_fixed
+        , total_due_fixed
     from deduplication_data
     where dedup_index = 1
 )

@@ -15,7 +15,7 @@ models:
         description: Customer identifier.
         tests:
           - relationships:
-              to: ref('dim_costumers')
+              to: ref('dim_customers')
               field: customer_sk
 
       - name: order_date
@@ -76,12 +76,19 @@ models:
           - relationships:
               to: ref('dim_cards_type')
               field: credit_card_sk      
+ 
+      - name: reason_type_fk
+        description: Type of sales reason foreign key.
+        tests:
+          - relationships:
+              to: ref('dim_reasons')
+              field: reason_type_sk      
 
       - name: carrier_tracking_number
         description: Shipment tracking number supplied by the shipper.   
 
       - name: paid_with_credit_card
-        description: If the sale was paied with a credit card.   
+        description: If the sale was paid with a credit card.   
 
       - name: Status
         description: Order current status. 1 = Pending; 2 = Approved; 3 = Rejected; 4 =Complete
@@ -106,4 +113,5 @@ models:
 
       - name: total_due_fixed
         description: Total due proportional of order_detail_id.
+
 

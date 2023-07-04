@@ -43,3 +43,24 @@ models:
 
       - name: state_province_id
         description: ID of state province
+
+      - name: address_type_name
+        description: 
+
+      - name: 
+        description: 
+
+      - name: 
+        description: 
+
+      - name: 
+        description: 
+
+      - name: 
+        description: 
+
+      - name: 
+        description: 
+
+      - name: 
+        description: 

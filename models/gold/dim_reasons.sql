@@ -6,15 +6,13 @@ with int_sales as (
 , deduplication_data as (
     select
         *
-        , row_number() over (partition by sales_reason_id order by sales_reason_id) as dedup_index
+        , row_number() over (partition by reason_type order by reason_type) as dedup_index
     from int_sales
 )
 
 , reason_with_sk  as (
     select
-        MD5(cast(sales_reason_id as string)) as sales_reason_sk
-        , MD5(cast(sales_order_id as string)) as sales_order_fk
-        , name_reason
+        MD5(cast(reason_type as string)) as reason_type_sk
         , reason_type
       from deduplication_data
     where dedup_index = 1

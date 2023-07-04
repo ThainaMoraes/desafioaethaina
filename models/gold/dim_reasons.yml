@@ -5,20 +5,11 @@ models:
   - name: dim_reasons
     description: This table contains information about the reason of the order from Adventure Works
     columns:
-      - name: sales_reason_sk
+      - name: reason_type_sk
         description: Single reason record.
         tests:
           - not_null
           - unique
-
-      - name: sales_order_fk
-        description: Single reason record.
-        tests:
-          - not_null
-          - unique
-
-      - name: name_reason
-        description: product's name description.
 
       - name: reason_type
-        description: Type of the reason.
+        description: Type of the sales reason.

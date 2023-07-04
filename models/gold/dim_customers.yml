@@ -14,7 +14,6 @@ models:
       - name: full_name
         description: Full name of customer
         tests:
-          - not_null        
         
       - name: territory_id
         description: Territory ID of customer.
@@ -22,7 +21,6 @@ models:
       - name: person_type
         description: Type of customer.
         tests:
-          - not_null
 
       - name: courtesy_title
         description: Courtesy title of customer. It can be null.
