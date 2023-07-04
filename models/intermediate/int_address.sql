@@ -23,6 +23,21 @@ with address as (
     from  {{ ref('stg_person_contact_type') }} 
 )
 
+, person_country as (
+	select * 
+    from {{ ref('stg_person_country_region') }}
+)
+
+, state_province as (
+	select * 
+    from {{ ref('stg_person_state_province') }}
+)
+
+, sales_territory as (
+	select * 
+    from {{ ref('stg_sales_territory') }}
+)
+
 , union_person_addres as (
     select
         business_entity_address.address_id
@@ -52,5 +67,21 @@ with address as (
 	on contact_type_worker.contact_type_id = business_entity_contact.contact_type_id
 )
 
+, union_territory as (
+	select 
+		union_contact_type.*
+		, state_province_code
+		, state_province.country_region_code
+		, name_province_description
+		, state_province_name
+		, sales_territory.territory_id
+		, name_territory_description
+	from union_contact_type
+	left join state_province
+		on state_province.state_province_id = union_contact_type.state_province_id
+	left join sales_territory
+		on sales_territory.territory_id = state_province.territory_id
+)
+
 select * 
-from union_contact_type
+from union_territory

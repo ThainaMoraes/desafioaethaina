@@ -2,44 +2,28 @@ version: 2
 
 models:
 
-  - name: dim_customer
+  - name: dim_customers
     description: This table contains information about customers of Adventure Works
     columns:
       - name: customer_sk
-        description: Single promo record.
+        description: Single customer record.
         tests:
           - not_null
           - unique
 
       - name: full_name
-        # description: Year of metric_date.
+        description: Full name of customer
+        tests:
         
       - name: territory_id
-        # description: Year of metric_date.
+        description: Territory ID of customer.
 
       - name: person_type
-        # description: Quarter of metric_date.
+        description: Type of customer.
+        tests:
 
       - name: courtesy_title
-        # description: Full name of the month of the year.
+        description: Courtesy title of customer. It can be null.
 
       - name: email_promotion 
-        # description: Full name of the month of the year.
-
-      - name: name_territory_description
-        # description: Full name of the month of the year.
-
-      - name: country_region_code
-        # description: Full name of the month of the year.
-
-      - name: country_region_name
-        # description: Full name of the month of the year.
-
-      - name: state_province_id
-        # description: Full name of the month of the year.
-
-      - name: state_province_code
-        # description: Full name of the month of the year.
-
-      - name: state_province_name
-        # description: Full name of the month of the year.
+        description: If customers wants to receive an email promotion. 0 = don't / 1 = wants / 2 = wants from partners too

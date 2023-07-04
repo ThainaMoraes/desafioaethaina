@@ -13,11 +13,6 @@ with product as (
     from {{ ref('stg_product_category') }}
 )
 
-, inventory as (
-    select * 
-    from {{ ref('stg_product_inventory') }}
-)
-
 , location as (
     select * 
     from {{ ref('stg_product_location') }}
@@ -56,16 +51,6 @@ with product as (
     on union_product_category.product_model_id = model.model_id
 )
 
-, union_product_inventory as (
-    select 
-        union_product_model.*
-        , quantity_inventory
-        , shelf
-        , bin
-    from union_product_model
-    left join inventory
-    on union_product_model.product_id = inventory.product_id
-)
 
 select * 
-from union_product_inventory
+from union_product_model

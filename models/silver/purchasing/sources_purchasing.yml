@@ -4,18 +4,12 @@ sources:
   - name: source_dw
     description: Sources from DW with dataset od AdventureWorks
     schema: dev_thaina
-    tables:
-      - name: vendor
-        description: Cross-reference table mapping vendors with the products they supply.
-
-      - name: productvendor
-        description: Cross-reference table mapping vendors with the products they supply.
-     
-      - name: purchaseorderdetail
-        description: Individual products associated with a specific purchase order. See PurchaseOrderHeader.
-
-      - name: purchaseorderheader
-        description: Individual products associated with a specific purchase order. See PurchaseOrderHeader.
-        
+    tables:        
       - name: shipmethod
         description: Shipping company lookup table.
+        columns:
+          - name: shipmethodid
+            tests:
+              - not_null
+              - unique
+

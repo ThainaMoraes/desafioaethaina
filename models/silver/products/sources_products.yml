@@ -7,22 +7,68 @@ sources:
     tables:
       - name: product
         description: Products sold or used in the manfacturing of sold products.
+        columns:
+          - name: productid
+            tests:
+              - not_null
+              - unique
+
+          - name: name
+            tests:
+              - not_null
 
       - name: location
         description: Product inventory and manufacturing locations.
+        columns:
+          - name: locationid
+            tests:
+              - not_null
+              - unique
+
+          - name: name
+            tests:
+              - not_null
+              - unique
 
       - name: productcategory
         description: High-level product categorization.
+        columns:
+          - name: productcategoryid
+            tests:
+              - not_null
+              - unique
+
+          - name: name
+            tests:
+              - not_null
+              - unique
 
       - name: productsubcategory
         description: Product subcategories.
+        columns:
+          - name: productsubcategoryid
+            tests:
+              - not_null
+              - unique
 
-      - name: productdescription
-        description: Product descriptions in several languages.
+          - name: productcategoryid
+            tests:
+              - not_null
 
-      - name: productinventory
-        description: Product inventory information.
+          - name: name
+            tests:
+              - not_null
 
       - name: productmodel
         description: Product model classification.
+        columns:
+          - name: productmodelid
+            tests:
+              - not_null
+              - unique
+
+          - name: name
+            tests:
+              - not_null
+              - unique
      

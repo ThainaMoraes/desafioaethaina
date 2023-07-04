@@ -12,35 +12,27 @@ models:
           - unique
 
       - name: full_name
-        # description: Year of metric_date.
-
+        description: Full name of worker.
+        tests:
+          - not_null        
+        
       - name: territory_id
-        # description: Year of metric_date.
+        description: Territory ID of worker.
 
       - name: person_type
-        # description: Quarter of metric_date.
+        description: Type of worker.
+        tests:
+          - not_null
+
+      - name: suffix
+        description: Surname suffix of worker. It can be null.
+
+      - name: store_id
+        description: Id of the store the worker works.
 
       - name: courtesy_title
-        # description: Full name of the month of the year.
+        description: Courtesy title of worker. It can be null.
 
       - name: email_promotion 
-        # description: Full name of the month of the year.
-
-      - name: name_territory_description
-        # description: Full name of the month of the year.
-
-      - name: country_region_code
-        # description: Full name of the month of the year.
-
-      - name: country_region_name
-        # description: Full name of the month of the year.
-
-      - name: state_province_id
-        # description: Full name of the month of the year.
-
-      - name: state_province_code
-        # description: Full name of the month of the year.
-
-      - name: state_province_name
-        # description: Full name of the month of the year.
+        description: If workers wants to receive an email promotion. 0 = don't / 1 = wants / 2 = wants from partners too
 

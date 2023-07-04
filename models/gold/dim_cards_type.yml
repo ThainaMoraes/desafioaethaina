@@ -2,44 +2,16 @@ version: 2
 
 models:
 
-  - name: dim_customer
+  - name: dim_cards_type
     description: This table contains information about customers of Adventure Works
     columns:
-      - name: customer_sk
-        description: Single promo record.
-        # tests:
-        #   - not_null
-        #   - unique
+      - name: credit_card_sk
+        description: Single credit card record.
+        tests:
+          - not_null
+          - unique
 
-      - name: full_name
-        # description: Year of metric_date.
-        
-      - name: territory_id
-        # description: Year of metric_date.
-
-      - name: person_type
-        # description: Quarter of metric_date.
-
-      - name: courtesy_title
-        # description: Full name of the month of the year.
-
-      - name: email_promotion 
-        # description: Full name of the month of the year.
-
-      - name: name_territory_description
-        # description: Full name of the month of the year.
-
-      - name: country_region_code
-        # description: Full name of the month of the year.
-
-      - name: country_region_name
-        # description: Full name of the month of the year.
-
-      - name: state_province_id
-        # description: Full name of the month of the year.
-
-      - name: state_province_code
-        # description: Full name of the month of the year.
-
-      - name: state_province_name
-        # description: Full name of the month of the year.
+      - name: card_type
+        description: Credit card name.
+     
+      

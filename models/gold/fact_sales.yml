@@ -3,13 +3,20 @@ version: 2
 models:
 
   - name: fact_sales
-    description: Fact table containing Letts information about PepsiCo sales.
+    description: Fact table containing sales information.
     columns:
       - name: sale_identifier_sk
-        description: Unique identifier for each row on the fact table
+        description: Unique identifier for each row on the fact table.
         tests:
           - not_null
           - unique
+
+      - name: customer_fk
+        description: Customer identifier.
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_sk
 
       - name: order_date
         description: Date of sale.
@@ -18,38 +25,100 @@ models:
               to: ref('dim_dates')
               field: metric_date
 
-      - name: customer_fk
-        description: User foreign key.
+      - name: due_date
+        description: Date of due.
         tests:
           - relationships:
-              to: ref('dim_costumers')
-              field: customer_sk      
+              to: ref('dim_dates')
+              field: metric_date
 
-      - name: product_fk
-        description: User foreign key.
+      - name: ship_date
+        description: Date of ship.
         tests:
           - relationships:
-              to: ref('dim_products')
-              field: product_sk      
+              to: ref('dim_dates')
+              field: metric_date
 
-      - name: sales_person_fk
-        description: User foreign key.
+      - name: online_order
+        description: If the sale was online or not.
+
+      # - name: sales_person_fk
+      #   description: Sales person foreign key.
+      #   tests:
+      #     - relationships:
+      #         to: ref('dim_workers')
+      #         field: worker_sk 
+
+      - name: territory_fk
+        description: Territory foreign key.
         tests:
           - relationships:
-              to: ref('dim_workers')
-              field: worker_sk      
+              to: ref('dim_territories')
+              field: territory_sk
 
       - name: bill_to_address_fk
-        description: User foreign key.
+        description: Bill to address foreign key.
         tests:
           - relationships:
               to: ref('dim_address')
               field: address_sk      
 
       - name: ship_to_address_fk
-        description: User foreign key.
+        description: Ship to address foreign key.
         tests:
           - relationships:
               to: ref('dim_address')
               field: address_sk      
  
+      - name: product_fk
+        description: Product foreign key.
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_sk      
+ 
+      - name: credit_card_fk
+        description: Credit card foreign key.
+        tests:
+          - relationships:
+              to: ref('dim_cards_type')
+              field: credit_card_sk      
+ 
+      - name: reason_type_fk
+        description: Type of sales reason foreign key.
+        tests:
+          - relationships:
+              to: ref('dim_reasons')
+              field: reason_type_sk      
+
+      - name: carrier_tracking_number
+        description: Shipment tracking number supplied by the shipper.   
+
+      - name: paid_with_credit_card
+        description: If the sale was paid with a credit card.   
+
+      - name: Status
+        description: Order current status. 1 = Pending; 2 = Approved; 3 = Rejected; 4 =Complete
+
+      - name: order_qty
+        description: Quantity for each product.   
+
+      - name: unit_price
+        description: Unit price of product.   
+
+      - name: unit_price_discount
+        description: Discount for unit price.   
+
+      - name: sub_total_fixed
+        description: Subtotal proportional of order_detail_id.
+
+      - name: tax_amount_fixed
+        description: Tax amount proportional of order_detail_id.
+
+      - name: freight_fixed
+        description: Freight proportional of order_detail_id.
+
+      - name: total_due_fixed
+        description: Total due proportional of order_detail_id.
+
+

@@ -9,7 +9,6 @@ with int_product as (
         *
         , row_number() over (partition by product_id order by product_id) as dedup_index
     from int_product
- 
 )
 
 , prodcut_with_sk  as (
@@ -27,19 +26,10 @@ with int_product as (
         , size_product
         , style_product
         , weight_product
-        , shelf
-        , bin
-        , quantity_inventory
         , model_name
       from deduplication_data
     where dedup_index = 1  
 )
-
--- , select_not_null as (
---     select *
---     from prodcut_with_sk
---     where product_sk is not null
--- )
 
 select *
 from prodcut_with_sk 
