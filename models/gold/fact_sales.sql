@@ -15,7 +15,6 @@ with int_sales as (
        {{ dbt_utils.generate_surrogate_key(['sales_order_id', 'sales_order_detail_id']) }}  as sale_identifier_sk
         , {{ dbt_utils.generate_surrogate_key(['sales_order_id']) }} as sales_order_fk
         , {{ dbt_utils.generate_surrogate_key(['customer_id']) }} as customer_fk
-        , {{ dbt_utils.generate_surrogate_key(['territory_id']) }} as territory_fk
         , {{ dbt_utils.generate_surrogate_key(['bill_to_address_id']) }} as bill_to_address_fk
         , {{ dbt_utils.generate_surrogate_key(['ship_to_address_id']) }} as ship_to_address_fk
         , {{ dbt_utils.generate_surrogate_key(['ship_method_id']) }} as ship_method_fk
