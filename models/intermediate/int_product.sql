@@ -34,11 +34,11 @@ with product as (
         , size_product
         , weight_product 
         , case 
-            when style_product = 'W'
+            when style_product = 'W '
                 then 'Feminino'
-            when style_product = 'M'
+            when style_product = 'M '
                 then 'Masculino'
-            when style_product = 'U'
+            when style_product = 'U '
                 then 'Unisex'
             else 'Não definido'
         end as style_product
