@@ -88,11 +88,10 @@ with order_header as (
 		, bill_to_address_id
 		, ship_to_address_id
 		, ship_method_id
-		-- , credit_card_id
 		, case 
 			when credit_card_approval_code is not null
-				then "Outro método pagamento"
-			else "Pagamento cartão crédito"
+				then "Pagamento cartão crédito"
+			else "Outro método pagamento"
 		end as paid_with_credit_card
 		, card_type
 		, status
@@ -105,6 +104,7 @@ with order_header as (
 		, freight_fixed
 		, tax_fixed
 		, sub_total_fixed + freight_fixed + tax_fixed as total_due_fixed
+		, unit_price * order_qty as total_gross
 	from join_fixing_columns
 )
 

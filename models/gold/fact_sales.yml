@@ -110,6 +110,9 @@ models:
       - name: sub_total_fixed
         description: Subtotal proportional of order_detail_id.
 
+      - name: total_gross
+        description: Total gross proportional of order_detail_id.
+
       - name: tax_amount_fixed
         description: Tax amount proportional of order_detail_id.
 

@@ -33,6 +33,7 @@ with int_sales as (
         , unit_price
         , unit_price_discount
         , sub_total_fixed
+        , total_gross
 		, freight_fixed
 		, tax_fixed
         , total_due_fixed
