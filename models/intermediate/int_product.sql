@@ -13,11 +13,6 @@ with product as (
     from {{ ref('stg_product_category') }}
 )
 
-, location as (
-    select * 
-    from {{ ref('stg_product_location') }}
-)
-
 , model as (
     select * 
     from {{ ref('stg_product_model') }}

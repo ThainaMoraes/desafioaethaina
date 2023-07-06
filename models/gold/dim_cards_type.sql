@@ -13,8 +13,12 @@ with int_sales as (
 , credit_card_with_sk  as (
     select
         {{ dbt_utils.generate_surrogate_key(['card_type']) }} as credit_card_sk
-        , card_type
-      from deduplication_data
+        , case 
+            when card_type is null
+                then "Não definido"
+            else card_type
+        end as card_type
+        from deduplication_data
     where dedup_index = 1
 )
  
