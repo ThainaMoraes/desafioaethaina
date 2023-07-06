@@ -13,9 +13,9 @@ with int_product as (
 
 , prodcut_with_sk  as (
     select
-        MD5(cast(product_id as string)) as product_sk
-        , category_name
-        , subcategory_name
+        {{ dbt_utils.generate_surrogate_key(['product_id']) }} as product_sk
+        , ifnull(category_name, "Não definido") as category_name
+        , ifnull(subcategory_name,"Não definido") as subcategory_name
         , product_name
         , product_number
         , makeflag

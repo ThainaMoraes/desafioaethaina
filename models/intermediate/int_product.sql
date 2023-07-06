@@ -13,11 +13,6 @@ with product as (
     from {{ ref('stg_product_category') }}
 )
 
-, location as (
-    select * 
-    from {{ ref('stg_product_location') }}
-)
-
 , model as (
     select * 
     from {{ ref('stg_product_model') }}
@@ -25,7 +20,28 @@ with product as (
 
 , union_product_subcategory as (
     select 
-       product.*
+        product_id
+        , product_model_id
+        , product_subcategory_id
+        , product_name
+        , product_number
+        , makeflag
+        , finished_goods_flag
+        , color
+        , safety_stock_level
+        , stand_cost
+        , list_price
+        , size_product
+        , weight_product 
+        , case 
+            when style_product = 'W '
+                then 'Feminino'
+            when style_product = 'M '
+                then 'Masculino'
+            when style_product = 'U '
+                then 'Unisex'
+            else 'Não definido'
+        end as style_product
        , category_id
        , subcategory_name
     from product

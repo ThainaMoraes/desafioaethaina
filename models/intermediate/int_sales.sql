@@ -18,11 +18,6 @@ with order_header as (
 	from {{ ref('stg_sales_creditcard') }}	
 )
 
-, ship_method as (
-	select * 
-	from {{ ref('stg_purchasing_ship_method') }}
-)
-
 , reason as (
 	select *
 	from {{ ref('int_reason') }}
@@ -40,7 +35,6 @@ with order_header as (
 , union_header_detail as (
 	select 
 		union_credit_card.*
-		, shipping_company_name
 		, sales_order_detail_id
 		, carrier_tracking_number
 		, product_id
@@ -55,8 +49,6 @@ with order_header as (
 	from order_detail 
 	left join union_credit_card
 		on union_credit_card.sales_order_id =  order_detail.sales_order_id
-	left join ship_method
-		on ship_method.ship_method_id = union_credit_card.ship_method_id
 )
 
 , count_orders as (
@@ -88,19 +80,18 @@ with order_header as (
 		, ship_date
 		, case 
 			when purchase_order_number is not null
-				then "No"
-			else "Yes"
+				then "Compra na loja"
+			else "Compra online"
 		end as online_order
 		, sales_person_id
 		, territory_id
 		, bill_to_address_id
 		, ship_to_address_id
 		, ship_method_id
-		, credit_card_id
 		, case 
 			when credit_card_approval_code is not null
-				then "No"
-			else "Yes"
+				then "Pagamento cartão crédito"
+			else "Outro método pagamento"
 		end as paid_with_credit_card
 		, card_type
 		, status
@@ -113,6 +104,7 @@ with order_header as (
 		, freight_fixed
 		, tax_fixed
 		, sub_total_fixed + freight_fixed + tax_fixed as total_due_fixed
+		, unit_price * order_qty as total_gross
 	from join_fixing_columns
 )
 

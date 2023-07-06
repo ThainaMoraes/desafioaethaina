@@ -23,5 +23,11 @@ models:
       - name: quarter
         description: Quarter of metric_date.
 
-      - name: fullmonth
+      - name: full_month
         description: Full name of the month of the year.
+
+      - name: full_quarter
+        description: Full name of the quarter of the year.
+
+      - name: month_year
+        description: Month of the year and year of metric date, example Jan-2021.

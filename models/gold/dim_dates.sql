@@ -2,8 +2,8 @@
 with date_series as (
            {{ dbt_utils.date_spine(
                 datepart="day",
-                start_date= "cast('2011-05-01' as date)", 
-                end_date="cast('2014-07-31' as date)"
+                start_date= "cast('2011-01-01' as date)", 
+                end_date="cast('2014-12-31' as date)"
            )
            }}
     )
@@ -35,9 +35,22 @@ with date_series as (
             when month = 10 then 'Out'
             when month = 11 then 'Nov'
             when month = 12 then 'Dez'
-        end as fullmonth
+        end as full_month
+        , case
+            when quarter = 1 then 'Q1'
+            when quarter = 2 then 'Q2'
+            when quarter = 3 then 'Q3'
+            when quarter = 4 then 'Q4'
+        end as full_quarter
     from date_columns
 )
 
+, transformed as (
+    select 
+        *
+        , concat(full_month, '-', cast(year as string)) as month_year
+    from month_columns
+)
+
 select *
-from month_columns
+from transformed

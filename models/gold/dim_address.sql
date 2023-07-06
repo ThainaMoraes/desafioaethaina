@@ -12,7 +12,7 @@ with int_address as (
 
 , address_with_sk  as (
     select
-        MD5(cast(address_id as string)) address_sk
+        {{ dbt_utils.generate_surrogate_key(['address_id']) }} as address_sk
         , business_entity_id
         , address_type_id
         , address_type_name

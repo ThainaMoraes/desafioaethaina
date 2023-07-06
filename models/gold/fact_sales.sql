@@ -12,20 +12,20 @@ with int_sales as (
 
 , sales_with_sk  as (
     select
-        row_number() over (order by sales_order_id, sales_order_detail_id) as sale_identifier_sk
-        , MD5(cast(customer_id as string)) as customer_fk
+       {{ dbt_utils.generate_surrogate_key(['sales_order_id', 'sales_order_detail_id']) }}  as sale_identifier_sk
+        , {{ dbt_utils.generate_surrogate_key(['sales_order_id']) }} as sales_order_fk
+        , {{ dbt_utils.generate_surrogate_key(['customer_id']) }} as customer_fk
+        , {{ dbt_utils.generate_surrogate_key(['territory_id']) }} as territory_fk
+        , {{ dbt_utils.generate_surrogate_key(['bill_to_address_id']) }} as bill_to_address_fk
+        , {{ dbt_utils.generate_surrogate_key(['ship_to_address_id']) }} as ship_to_address_fk
+        , {{ dbt_utils.generate_surrogate_key(['ship_method_id']) }} as ship_method_fk
+        , {{ dbt_utils.generate_surrogate_key(['product_id']) }} as product_fk
+        , {{ dbt_utils.generate_surrogate_key(['card_type']) }} as credit_card_fk
+        , {{ dbt_utils.generate_surrogate_key(['reason_type']) }} as reason_type_fk
         , order_date
         , due_date
         , ship_date
         , online_order
-        , MD5(cast(sales_person_id as string)) as sales_person_fk
-        , MD5(cast(territory_id as string)) as territory_fk
-        , MD5(cast(bill_to_address_id as string)) as bill_to_address_fk
-        , MD5(cast(ship_to_address_id as string)) as ship_to_address_fk
-        , MD5(cast(ship_method_id as string)) as ship_method_fk
-        , MD5(cast(product_id as string)) as product_fk
-        , MD5(cast(credit_card_id as string)) as credit_card_fk
-        , MD5(cast(reason_type as string)) as reason_type_fk
         , carrier_tracking_number
         , paid_with_credit_card
         , status
@@ -33,6 +33,7 @@ with int_sales as (
         , unit_price
         , unit_price_discount
         , sub_total_fixed
+        , total_gross
 		, freight_fixed
 		, tax_fixed
         , total_due_fixed
