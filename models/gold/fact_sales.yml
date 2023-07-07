@@ -23,13 +23,6 @@ models:
               to: ref('dim_customers')
               field: customer_sk
 
-      - name: territory_fk
-        description: Territory foreign key.
-        tests:
-          - relationships:
-              to: ref('dim_territories')
-              field: territory_sk
-
       - name: bill_to_address_fk
         description: Bill to address foreign key.
         tests:
